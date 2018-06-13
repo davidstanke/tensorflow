@@ -1,4 +1,4 @@
-import /remote_build_test_container/project_src/.tf_configure.bazelrc
+import %workspace%/.tf_configure.bazelrc
 import %workspace%/tools/bazel.rc
 
 startup --host_jvm_args=-Dbazel.DigestFunction=SHA256
