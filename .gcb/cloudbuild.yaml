@@ -3,6 +3,6 @@ steps:
   name: gcr.io/cloud-builders/bazel
   entrypoint: 'sh' #pass commands directly to shell
   args:
-  - 'c'
+  - '-c'
   - |
     bazel --nomaster_bazelrc --bazelrc=.bazelrc_rbe test //tensorflow/core/...
