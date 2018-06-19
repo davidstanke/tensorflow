@@ -1,9 +1,8 @@
 steps:
 - id: 'Bazel Test TensorFlow/core'
-  name: gcr.io/btd-pm/demo:working
+  name: gcr.io/cloud-builders/bazel
   entrypoint: 'sh' # pass commands directly to shell
   args:
     - '-c'
     - |
-      cd /cd remote_build_test_container/project_src/ && \
-      bazel test //tensorflow/core/...
+      bazel --nomaster_bazelrc --bazelrc=.bazelrc_rbe build //tensorflow/core/...
