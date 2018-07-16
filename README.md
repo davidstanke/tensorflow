@@ -1,3 +1,14 @@
+# DEMO REPO
+I hope to create a simple web application that calls TF via java. We'll build it three ways:
+
+* Maven
+* Bazel (local)
+* Bazel (remote)
+
+## (regular TF below here)
+
+
+
 <div align="center">
   <img src="https://www.tensorflow.org/images/tf_logo_transp.png"><br><br>
 </div>
