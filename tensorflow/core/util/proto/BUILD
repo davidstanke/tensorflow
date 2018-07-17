@@ -39,6 +39,7 @@ cc_library(
 tf_cc_test(
     name = "descriptor_pool_registry_test",
     srcs = ["descriptor_pool_registry_test.cc"],
+    size = "small",
     deps = [
         ":descriptor_pool_registry",
         "//tensorflow/core:lib",

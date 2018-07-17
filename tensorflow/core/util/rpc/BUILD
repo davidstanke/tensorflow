@@ -39,6 +39,7 @@ cc_library(
 tf_cc_test(
     name = "rpc_factory_registry_test",
     srcs = ["rpc_factory_registry_test.cc"],
+    size = "small",
     deps = [
         ":rpc_factory_registry",
         "//tensorflow/core:test",

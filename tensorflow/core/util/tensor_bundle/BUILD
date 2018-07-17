@@ -64,6 +64,7 @@ cc_library(
 tf_cc_test(
     name = "tensor_bundle_test",
     srcs = ["tensor_bundle_test.cc"],
+    size = "small",
     deps = [
         ":tensor_bundle",
         "//tensorflow/core:framework",
