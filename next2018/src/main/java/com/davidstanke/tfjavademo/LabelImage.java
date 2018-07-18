@@ -66,7 +66,7 @@ public class LabelImage {
       float[] labelProbabilities = executeInceptionGraph(graphDef, image);
       int bestLabelIdx = maxIndex(labelProbabilities);
       System.out.println(
-          String.format("BEST MATCH: %s (%.2f%% likely [not!])",
+          String.format("BEST MATCH: %s (%.2f%% likely [1234])",
               labels.get(bestLabelIdx),
               labelProbabilities[bestLabelIdx] * 100f));
     }
