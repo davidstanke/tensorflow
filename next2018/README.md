@@ -5,7 +5,7 @@ This project provides a comparison between build systems/techniques. It's a simp
 
 This application has been successfully built on Ubuntu 16.04. It _should_ work on other OSes, though native library install may be different.
 
-###Setup
+### Setup
 * Required software
 * * Bazel 0.15+
 * * Maven 3+
@@ -18,16 +18,16 @@ This application has been successfully built on Ubuntu 16.04. It _should_ work o
 * * Authenticate: `gcloud init` --> choose project "better-demos" and default zone "us-central1-c"
 * * Copy service account credentials: `gsutil cp better-demos:creds/demo-cred.json ./creds/`
 
-###Building
+### Building
 Run commands in this directory
-####To build and run with Maven:
+#### To build and run with Maven:
 `mvn package && java -jar target/tfjavademo-0.1-jar-with-dependencies.jar`
-####To build and run with Bazel (local execution):
+#### To build and run with Bazel (local execution):
 `bazel test ... && bazel run tfjavademo`
-####To build and run with Bazel (remote execution):
+#### To build and run with Bazel (remote execution):
 `bazel test ... --config=rbe && bazel run tfjavademo --config=rbe`
 
-###Demo script
+### Demo script
 0. Java change: Edit a file in src/main/java/org/apache/commons/lang3/
 0. Re-run Maven and Bazel (local): both should re-execute JUnit tests
 0. C++ chnange: Edit a file in ../tensorflow/core
