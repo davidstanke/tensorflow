@@ -28,7 +28,7 @@ Run commands in this directory
 `bazel test ... --config=rbe && bazel run tfjavademo --config=rbe`
 
 ### Demo script
-0. Java change: Edit a file in src/main/java/org/apache/commons/lang3/
-0. Re-run Maven and Bazel (local): both should re-execute JUnit tests
-0. C++ chnange: Edit a file in ../tensorflow/core
-0. Re-run Bazel (local) and Bazel (remote): both should re-execute C++ tests
+1. Java change: Edit a file in src/main/java/org/apache/commons/lang3/
+1. Re-run Maven and Bazel (local): both should re-execute JUnit tests
+1. C++ chnange: Edit a file in ../tensorflow/core
+1. Re-run Bazel (local) and Bazel (remote): both should re-execute C++ tests
