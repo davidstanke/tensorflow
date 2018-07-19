@@ -13,7 +13,7 @@ build --action_env TF_NEED_OPENCL_SYCL="0"
 build --action_env TF_NEED_CUDA="0"
 build --action_env TF_DOWNLOAD_CLANG="0"
 build --define grpc_no_ares=true
-build:opt --copt=-march=native
-build:opt --host_copt=-march=native
-build:opt --define with_default_optimizations=true
+build --copt=-march=native
+build --host_copt=-march=native
+build --define with_default_optimizations=true
 build --strip=always

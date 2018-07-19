@@ -13,7 +13,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ==============================================================================*/
 
-package org.tensorflow.examples;
+package com.davidstanke.tfjavademo;
 
 import java.io.IOException;
 import java.io.PrintStream;
@@ -66,7 +66,7 @@ public class LabelImage {
       float[] labelProbabilities = executeInceptionGraph(graphDef, image);
       int bestLabelIdx = maxIndex(labelProbabilities);
       System.out.println(
-          String.format("BEST MATCH: %s (%.2f%% likely [1234])",
+          String.format("BEST MATCH: %s (%.2f%% likely)",
               labels.get(bestLabelIdx),
               labelProbabilities[bestLabelIdx] * 100f));
     }

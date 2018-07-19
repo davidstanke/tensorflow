@@ -1,6 +1,6 @@
 package com.davidstanke.tfjavademo;
 
-import org.tensorflow.examples.*;
+//import org.tensorflow.examples.*;
 import java.util.Scanner;
 
 import javax.imageio.ImageIO;
@@ -16,10 +16,17 @@ public class TFJavaDemo {
 
 	public static void main(String[] args) throws IOException {
 		Scanner keyboard = new Scanner(System.in);
+	
+		String filepath = "";
+	
+		if(args.length == 1) {
+			filepath = args[0];
+		} else {
 
-		System.out.println("Welcome to Java Image Labeller!");
-		System.out.println("Enter the path to an image you'd like to label...");
-		String filepath = keyboard.next();
+			System.out.println("Welcome to Java Image Labeller!");
+			System.out.println("Enter the path to an image you'd like to label...");
+			filepath = keyboard.next();
+		}
 		
 		System.out.println("Great, let's see what it looks like:");
 		
@@ -36,7 +43,6 @@ public class TFJavaDemo {
 		
 		li.main(labelArgs);
 
-		System.out.println("Do you agree?");
 
 	}
 
