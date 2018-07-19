@@ -10,7 +10,8 @@
 
 java_binary(
     name="tfjavademo",
-    srcs=glob(["src/main/java/com/davidstanke/tfjavademo/*.java"]),
+    srcs=glob(["src/main/java/com/davidstanke/**/*.java"])
+         + glob(["src/main/java/org/apache/**/*.java"]),
     main_class = "com.davidstanke.tfjavademo.TFJavaDemo",
     deps = ["//tensorflow/java:tensorflow"],
 )
