@@ -1,13 +1,6 @@
 # Description:
 # A simple Java application based on TensorFlow's java example
 
-#java_binary(
-#   name="demo",
-#   srcs=["LabelImage.java"],
-#   main_class = "org.tensorflow.examples.LabelImage",
-#   deps = ["//tensorflow/java:tensorflow"],
-#)
-
 java_binary(
     name="tfjavademo",
     srcs=glob(["src/main/java/com/davidstanke/**/*.java"])
@@ -16,12 +9,6 @@ java_binary(
     deps = ["//tensorflow/java:tensorflow"]
 )
 
-
-#java_test(
-#	name="AnnotationUtilsTest",
-#	srcs=["src/test/java/org/apache/commons/lang3/AnnotationUtilsTest.java"],
-#	deps=[":tfjavademo"],
-#)
 
 java_test(name="AnnotationUtilsTest", srcs=["src/test/java/org/apache/commons/lang3/AnnotationUtilsTest.java"], deps=[":tfjavademo"],)
 java_test(name="ArchUtilsTest", srcs=["src/test/java/org/apache/commons/lang3/ArchUtilsTest.java"], deps=[":tfjavademo"],)
