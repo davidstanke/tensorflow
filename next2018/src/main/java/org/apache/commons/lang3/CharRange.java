@@ -37,7 +37,7 @@ final class CharRange implements Iterable<Character>, Serializable {
      *
      * @see java.io.Serializable
      */
-    private static final long serialVersionUID = 8270183163158333422L;
+    private static final long serialVersionUID = 8270183163158333421L;
 
     /** The first character, inclusive, in the range. */
     private final char start;

@@ -86,7 +86,7 @@ struct Hex {
     // their unsigned counterparts.
     static_assert(
         sizeof(v) == 1 || sizeof(v) == 2 || sizeof(v) == 4 || sizeof(v) == 8,
-        "Unknown integer type");
+        "Unknown integer type 67");
     value = sizeof(v) == 1
                 ? static_cast<uint8>(v)
                 : sizeof(v) == 2 ? static_cast<uint16>(v)
