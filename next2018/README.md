@@ -7,16 +7,16 @@ This application has been successfully built on Ubuntu 16.04. It _should_ work o
 
 ### Setup
 * Required software
-* * Bazel 0.15+
-* * Maven 3+
+  * Bazel 0.15+
+    * Maven 3+
 * Setup local machine (at root of repo)
-* * Run `./configure` to prepare TensorFlow Bazel workspace
-* * * Note: this might fail b/c the repo is pre-configured with an Ubuntu config. TBH I'm not sure what happens if you try to configure over it.
-* * Build the TF native library and Java wrapper: `bazel build //tensorflow/java:pom`
-* * Configure the local JDK to load the native library: add `export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${cwd}/bazel-bin/tensorflow/java` to ~/.bashrc; `source ~/.bashrc`
+  * Run `./configure` to prepare TensorFlow Bazel workspace
+    * Note: this might fail b/c the repo is pre-configured with an Ubuntu config. TBH I'm not sure what happens if you try to configure over it.
+  * Build the TF native library and Java wrapper: `bazel build //tensorflow/java:pom`
+  * Configure the local JDK to load the native library: add `export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${cwd}/bazel-bin/tensorflow/java` to ~/.bashrc; `source ~/.bashrc`
 * Setup GCP (at root of repo)
-* * Authenticate: `gcloud init` --> choose project "better-demos" and default zone "us-central1-c"
-* * Copy service account credentials: `gsutil cp better-demos:creds/demo-cred.json ./creds/`
+  * Authenticate: `gcloud init` --> choose project "better-demos" and default zone "us-central1-c"
+  * Copy service account credentials: `gsutil cp better-demos:creds/demo-cred.json ./creds/`
 
 ### Building
 Run commands in this directory
