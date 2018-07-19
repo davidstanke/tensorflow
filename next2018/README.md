@@ -1,0 +1,34 @@
+# TensorFlow/Java Build demo
+
+## about
+This project provides a comparison between build systems/techniques. It's a simple Java application that wraps TensorFlow's Java JNI wrapper, which calls a native library. It also has a dependency on the Apache Commons "lang3" Java library, which is vendored beneath this folder.
+
+This application has been successfully built on Ubuntu 16.04. It _should_ work on other OSes, though native library install may be different.
+
+###Setup
+* Required software
+* * Bazel 0.15+
+* * Maven 3+
+* Setup local machine (at root of repo)
+* * Run `./configure` to prepare TensorFlow Bazel workspace
+* * * Note: this might fail b/c the repo is pre-configured with an Ubuntu config. TBH I'm not sure what happens if you try to configure over it.
+* * Build the TF native library and Java wrapper: `bazel build //tensorflow/java:pom`
+* * Configure the local JDK to load the native library: add `export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${cwd}/bazel-bin/tensorflow/java` to ~/.bashrc; `source ~/.bashrc`
+* Setup GCP (at root of repo)
+* * Authenticate: `gcloud init` --> choose project "better-demos" and default zone "us-central1-c"
+* * Copy service account credentials: `gsutil cp better-demos:creds/demo-cred.json ./creds/`
+
+###Building
+Run commands in this directory
+####To build and run with Maven:
+`mvn package && java -jar target/tfjavademo-0.1-jar-with-dependencies.jar`
+####To build and run with Bazel (local execution):
+`bazel test ... && bazel run tfjavademo`
+####To build and run with Bazel (remote execution):
+`bazel test ... --config=rbe && bazel run tfjavademo --config=rbe`
+
+###Demo script
+0. Java change: Edit a file in src/main/java/org/apache/commons/lang3/
+0. Re-run Maven and Bazel (local): both should re-execute JUnit tests
+0. C++ chnange: Edit a file in ../tensorflow/core
+0. Re-run Bazel (local) and Bazel (remote): both should re-execute C++ tests
