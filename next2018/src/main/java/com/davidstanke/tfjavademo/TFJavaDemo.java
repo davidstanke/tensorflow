@@ -28,12 +28,15 @@ public class TFJavaDemo {
 		if(args.length == 1) {
 			filepath = args[0];
 		} else {
-
-			System.out.println("Welcome to Java Image Labeller!");
+			Greeter greeter = new Greeter();
+			System.out.println(greeter.getGreeting());
+			//System.out.println("Welcome to Java Image Labeller!");
 			System.out.println("Enter the path to an image you'd like to label...");
 			filepath = keyboard.next();
 		}
 		
+		System.out.println(System.getProperty("user.dir"));		
+
 		System.out.println("Great, let's see what it looks like:");
 		
 		System.out.print(getAscii(filepath));

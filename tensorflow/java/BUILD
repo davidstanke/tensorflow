@@ -38,8 +38,7 @@ filegroup(
         "src/main/java/org/tensorflow/types/*.java",
     ]),
     visibility = [
-        "//tensorflow/contrib/android:__pkg__",
-        "//tensorflow/java:__pkg__",
+    	"//visibility:public"
     ],
 )
 
@@ -62,7 +61,7 @@ filegroup(
     name = "java_op_sources",
     srcs = glob(["src/main/java/org/tensorflow/op/**/*.java"]) + [":java_op_gen_sources"],
     visibility = [
-        "//tensorflow/java:__pkg__",
+        "//visibility:public",
     ],
 )
 
