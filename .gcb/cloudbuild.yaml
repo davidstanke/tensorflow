@@ -1,7 +1,7 @@
 steps:
 - id: 'Copy creds'
   name: gcr.io/cloud-builders/gsutil
-  args: ['cp', 'gs://next2018-demo-bazel/demo-cred.json', 'creds/demo-cred.json']
+  args: ['cp', 'gs://next2018-demo-bazel/creds/demo-cred.json', 'creds/demo-cred.json']
 - id: 'Bazel Test TensorFlow/Java Demo'
   name: gcr.io/cloud-builders/bazel
   entrypoint: 'sh' # pass commands directly to shell
