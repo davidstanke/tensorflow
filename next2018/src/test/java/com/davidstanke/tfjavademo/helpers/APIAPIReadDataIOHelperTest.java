@@ -12,9 +12,14 @@ import org.junit.Test;
 
 public class APIAPIReadDataIOHelperTest {
     @Test
-    public void testHelperAPIAPIReadDataIO() {
+    public void testValidAPIAPIReadDataIO() {
 		APIAPIReadDataIOHelper helper = new APIAPIReadDataIOHelper();
 		assertEquals(helper.help(),"valid");
     }
+@Test
+public void testAnotherFalseAPIAPIReadDataIO() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
 }
-
+}

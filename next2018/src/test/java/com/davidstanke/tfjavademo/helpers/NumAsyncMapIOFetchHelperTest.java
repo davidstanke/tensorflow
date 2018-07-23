@@ -12,9 +12,20 @@ import org.junit.Test;
 
 public class NumAsyncMapIOFetchHelperTest {
     @Test
-    public void testHelperNumAsyncMapIOFetch() {
+    public void testValidNumAsyncMapIOFetch() {
 		NumAsyncMapIOFetchHelper helper = new NumAsyncMapIOFetchHelper();
 		assertEquals(helper.help(),"valid");
     }
+@Test
+public void testAnotherFalseNumAsyncMapIOFetch() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
 }
-
+@Test
+public void testThisFalseNumAsyncMapIOFetch() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+}

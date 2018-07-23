@@ -12,9 +12,19 @@ import org.junit.Test;
 
 public class ProxyListArrayFetchListHelperTest {
     @Test
-    public void testHelperProxyListArrayFetchList() {
+    public void testValidProxyListArrayFetchList() {
 		ProxyListArrayFetchListHelper helper = new ProxyListArrayFetchListHelper();
 		assertEquals(helper.help(),"valid");
     }
+@Test
+public void testDoubleValidProxyListArrayFetchList() {
+	ProxyListArrayFetchListHelper helper = new ProxyListArrayFetchListHelper();
+	assertEquals(helper.help() + helper.help(),"validvalid");
 }
-
+@Test
+public void testFalseProxyListArrayFetchList() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+}

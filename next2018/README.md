@@ -1,7 +1,7 @@
 # TensorFlow/Java Build demo
 
 ## about
-This project provides a comparison between build systems/techniques. It's a simple Java application that wraps TensorFlow's Java JNI wrapper, which calls a native library. It also has a dependency on the Apache Commons "lang3" Java library, which is vendored beneath this folder.
+This project provides a comparison between build systems/techniques. It's a simple Java application that wraps TensorFlow's Java JNI wrapper, which calls a native library. It has a dependency on the Apache Commons "lang3" Java library, which is vendored beneath this folder. There are also a number of not-terribly-useful generated Java libraries, designed to increase the complexity of the build.
 
 This application has been successfully built on Ubuntu 16.04. It _should_ work on other OSes, though native library install may be different.
 

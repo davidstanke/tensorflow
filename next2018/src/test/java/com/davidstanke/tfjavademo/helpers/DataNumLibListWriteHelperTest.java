@@ -12,9 +12,14 @@ import org.junit.Test;
 
 public class DataNumLibListWriteHelperTest {
     @Test
-    public void testHelperDataNumLibListWrite() {
+    public void testValidDataNumLibListWrite() {
 		DataNumLibListWriteHelper helper = new DataNumLibListWriteHelper();
 		assertEquals(helper.help(),"valid");
     }
+@Test
+public void testAnotherFalseDataNumLibListWrite() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
 }
-
+}

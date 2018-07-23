@@ -12,9 +12,20 @@ import org.junit.Test;
 
 public class UtilWriteStringUtilArrayHelperTest {
     @Test
-    public void testHelperUtilWriteStringUtilArray() {
+    public void testValidUtilWriteStringUtilArray() {
 		UtilWriteStringUtilArrayHelper helper = new UtilWriteStringUtilArrayHelper();
 		assertEquals(helper.help(),"valid");
     }
+@Test
+public void testFalseUtilWriteStringUtilArray() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
 }
-
+@Test
+public void testThisFalseUtilWriteStringUtilArray() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+}

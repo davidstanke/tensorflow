@@ -12,9 +12,26 @@ import org.junit.Test;
 
 public class IOTensorStreamListIOHelperTest {
     @Test
-    public void testHelperIOTensorStreamListIO() {
+    public void testValidIOTensorStreamListIO() {
 		IOTensorStreamListIOHelper helper = new IOTensorStreamListIOHelper();
 		assertEquals(helper.help(),"valid");
     }
+@Test
+public void testFalseIOTensorStreamListIO() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
 }
-
+@Test
+public void testAnotherFalseIOTensorStreamListIO() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+@Test
+public void testThisFalseIOTensorStreamListIO() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+}

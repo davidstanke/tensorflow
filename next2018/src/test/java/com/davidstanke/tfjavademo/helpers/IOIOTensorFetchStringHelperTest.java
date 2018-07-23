@@ -12,9 +12,25 @@ import org.junit.Test;
 
 public class IOIOTensorFetchStringHelperTest {
     @Test
-    public void testHelperIOIOTensorFetchString() {
+    public void testValidIOIOTensorFetchString() {
 		IOIOTensorFetchStringHelper helper = new IOIOTensorFetchStringHelper();
 		assertEquals(helper.help(),"valid");
     }
+@Test
+public void testDoubleValidIOIOTensorFetchString() {
+	IOIOTensorFetchStringHelper helper = new IOIOTensorFetchStringHelper();
+	assertEquals(helper.help() + helper.help(),"validvalid");
 }
-
+@Test
+public void testFalseIOIOTensorFetchString() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+@Test
+public void testOtherFalseIOIOTensorFetchString() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+}

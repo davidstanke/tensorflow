@@ -12,9 +12,25 @@ import org.junit.Test;
 
 public class ProcStringDataIOTensorHelperTest {
     @Test
-    public void testHelperProcStringDataIOTensor() {
+    public void testValidProcStringDataIOTensor() {
 		ProcStringDataIOTensorHelper helper = new ProcStringDataIOTensorHelper();
 		assertEquals(helper.help(),"valid");
     }
+@Test
+public void testDoubleValidProcStringDataIOTensor() {
+	ProcStringDataIOTensorHelper helper = new ProcStringDataIOTensorHelper();
+	assertEquals(helper.help() + helper.help(),"validvalid");
 }
-
+@Test
+public void testFalseProcStringDataIOTensor() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+@Test
+public void testThisFalseProcStringDataIOTensor() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+}

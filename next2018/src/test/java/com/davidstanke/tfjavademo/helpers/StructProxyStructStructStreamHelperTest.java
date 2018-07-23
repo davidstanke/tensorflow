@@ -12,9 +12,20 @@ import org.junit.Test;
 
 public class StructProxyStructStructStreamHelperTest {
     @Test
-    public void testHelperStructProxyStructStructStream() {
+    public void testValidStructProxyStructStructStream() {
 		StructProxyStructStructStreamHelper helper = new StructProxyStructStructStreamHelper();
 		assertEquals(helper.help(),"valid");
     }
+@Test
+public void testOtherFalseStructProxyStructStructStream() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
 }
-
+@Test
+public void testAnotherFalseStructProxyStructStructStream() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+}

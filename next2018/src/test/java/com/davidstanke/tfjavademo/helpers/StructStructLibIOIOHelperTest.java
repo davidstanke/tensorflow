@@ -12,9 +12,14 @@ import org.junit.Test;
 
 public class StructStructLibIOIOHelperTest {
     @Test
-    public void testHelperStructStructLibIOIO() {
+    public void testValidStructStructLibIOIO() {
 		StructStructLibIOIOHelper helper = new StructStructLibIOIOHelper();
 		assertEquals(helper.help(),"valid");
     }
+@Test
+public void testAnotherFalseStructStructLibIOIO() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
 }
-
+}

@@ -12,9 +12,14 @@ import org.junit.Test;
 
 public class DataTensorProxyProxyHelperTest {
     @Test
-    public void testHelperDataTensorProxyProxy() {
+    public void testValidDataTensorProxyProxy() {
 		DataTensorProxyProxyHelper helper = new DataTensorProxyProxyHelper();
 		assertEquals(helper.help(),"valid");
     }
+@Test
+public void testFalseDataTensorProxyProxy() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
 }
-
+}

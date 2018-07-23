@@ -12,9 +12,8 @@ import org.junit.Test;
 
 public class ProxySerialStringAsyncHelperTest {
     @Test
-    public void testHelperProxySerialStringAsync() {
+    public void testValidProxySerialStringAsync() {
 		ProxySerialStringAsyncHelper helper = new ProxySerialStringAsyncHelper();
 		assertEquals(helper.help(),"valid");
     }
 }
-

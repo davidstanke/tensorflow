@@ -12,9 +12,26 @@ import org.junit.Test;
 
 public class FetchAPILibStringNumHelperTest {
     @Test
-    public void testHelperFetchAPILibStringNum() {
+    public void testValidFetchAPILibStringNum() {
 		FetchAPILibStringNumHelper helper = new FetchAPILibStringNumHelper();
 		assertEquals(helper.help(),"valid");
     }
+@Test
+public void testFalseFetchAPILibStringNum() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
 }
-
+@Test
+public void testOtherFalseFetchAPILibStringNum() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+@Test
+public void testThisFalseFetchAPILibStringNum() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+}

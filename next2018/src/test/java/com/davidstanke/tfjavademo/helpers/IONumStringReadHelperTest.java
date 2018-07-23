@@ -12,9 +12,13 @@ import org.junit.Test;
 
 public class IONumStringReadHelperTest {
     @Test
-    public void testHelperIONumStringRead() {
+    public void testValidIONumStringRead() {
 		IONumStringReadHelper helper = new IONumStringReadHelper();
 		assertEquals(helper.help(),"valid");
     }
+@Test
+public void testDoubleValidIONumStringRead() {
+	IONumStringReadHelper helper = new IONumStringReadHelper();
+	assertEquals(helper.help() + helper.help(),"validvalid");
 }
-
+}

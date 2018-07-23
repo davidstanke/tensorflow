@@ -12,9 +12,20 @@ import org.junit.Test;
 
 public class SerialLibNumProcHelperTest {
     @Test
-    public void testHelperSerialLibNumProc() {
+    public void testValidSerialLibNumProc() {
 		SerialLibNumProcHelper helper = new SerialLibNumProcHelper();
 		assertEquals(helper.help(),"valid");
     }
+@Test
+public void testFalseSerialLibNumProc() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
 }
-
+@Test
+public void testAnotherFalseSerialLibNumProc() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+}

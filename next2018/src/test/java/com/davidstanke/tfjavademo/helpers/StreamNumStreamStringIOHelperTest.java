@@ -12,9 +12,19 @@ import org.junit.Test;
 
 public class StreamNumStreamStringIOHelperTest {
     @Test
-    public void testHelperStreamNumStreamStringIO() {
+    public void testValidStreamNumStreamStringIO() {
 		StreamNumStreamStringIOHelper helper = new StreamNumStreamStringIOHelper();
 		assertEquals(helper.help(),"valid");
     }
+@Test
+public void testDoubleValidStreamNumStreamStringIO() {
+	StreamNumStreamStringIOHelper helper = new StreamNumStreamStringIOHelper();
+	assertEquals(helper.help() + helper.help(),"validvalid");
 }
-
+@Test
+public void testFalseStreamNumStreamStringIO() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+}

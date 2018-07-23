@@ -12,9 +12,26 @@ import org.junit.Test;
 
 public class APIProcArrayListArrayHelperTest {
     @Test
-    public void testHelperAPIProcArrayListArray() {
+    public void testValidAPIProcArrayListArray() {
 		APIProcArrayListArrayHelper helper = new APIProcArrayListArrayHelper();
 		assertEquals(helper.help(),"valid");
     }
+@Test
+public void testOtherFalseAPIProcArrayListArray() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
 }
-
+@Test
+public void testAnotherFalseAPIProcArrayListArray() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+@Test
+public void testThisFalseAPIProcArrayListArray() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+}

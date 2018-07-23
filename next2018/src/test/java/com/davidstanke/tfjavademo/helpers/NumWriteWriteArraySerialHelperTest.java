@@ -12,9 +12,14 @@ import org.junit.Test;
 
 public class NumWriteWriteArraySerialHelperTest {
     @Test
-    public void testHelperNumWriteWriteArraySerial() {
+    public void testValidNumWriteWriteArraySerial() {
 		NumWriteWriteArraySerialHelper helper = new NumWriteWriteArraySerialHelper();
 		assertEquals(helper.help(),"valid");
     }
+@Test
+public void testFalseNumWriteWriteArraySerial() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
 }
-
+}

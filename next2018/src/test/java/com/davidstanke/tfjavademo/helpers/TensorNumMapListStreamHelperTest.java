@@ -12,9 +12,26 @@ import org.junit.Test;
 
 public class TensorNumMapListStreamHelperTest {
     @Test
-    public void testHelperTensorNumMapListStream() {
+    public void testValidTensorNumMapListStream() {
 		TensorNumMapListStreamHelper helper = new TensorNumMapListStreamHelper();
 		assertEquals(helper.help(),"valid");
     }
+@Test
+public void testFalseTensorNumMapListStream() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
 }
-
+@Test
+public void testOtherFalseTensorNumMapListStream() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+@Test
+public void testThisFalseTensorNumMapListStream() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+}

@@ -12,9 +12,20 @@ import org.junit.Test;
 
 public class LibProxyListHelperTest {
     @Test
-    public void testHelperLibProxyList() {
+    public void testValidLibProxyList() {
 		LibProxyListHelper helper = new LibProxyListHelper();
 		assertEquals(helper.help(),"valid");
     }
+@Test
+public void testAnotherFalseLibProxyList() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
 }
-
+@Test
+public void testThisFalseLibProxyList() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+}

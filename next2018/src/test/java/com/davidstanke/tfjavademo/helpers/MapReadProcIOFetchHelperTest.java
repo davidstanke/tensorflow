@@ -12,9 +12,8 @@ import org.junit.Test;
 
 public class MapReadProcIOFetchHelperTest {
     @Test
-    public void testHelperMapReadProcIOFetch() {
+    public void testValidMapReadProcIOFetch() {
 		MapReadProcIOFetchHelper helper = new MapReadProcIOFetchHelper();
 		assertEquals(helper.help(),"valid");
     }
 }
-

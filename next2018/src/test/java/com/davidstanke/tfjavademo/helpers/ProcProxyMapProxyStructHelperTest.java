@@ -12,9 +12,19 @@ import org.junit.Test;
 
 public class ProcProxyMapProxyStructHelperTest {
     @Test
-    public void testHelperProcProxyMapProxyStruct() {
+    public void testValidProcProxyMapProxyStruct() {
 		ProcProxyMapProxyStructHelper helper = new ProcProxyMapProxyStructHelper();
 		assertEquals(helper.help(),"valid");
     }
+@Test
+public void testDoubleValidProcProxyMapProxyStruct() {
+	ProcProxyMapProxyStructHelper helper = new ProcProxyMapProxyStructHelper();
+	assertEquals(helper.help() + helper.help(),"validvalid");
 }
-
+@Test
+public void testFalseProcProxyMapProxyStruct() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+}

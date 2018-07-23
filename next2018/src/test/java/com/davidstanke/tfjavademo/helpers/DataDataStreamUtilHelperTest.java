@@ -12,9 +12,20 @@ import org.junit.Test;
 
 public class DataDataStreamUtilHelperTest {
     @Test
-    public void testHelperDataDataStreamUtil() {
+    public void testValidDataDataStreamUtil() {
 		DataDataStreamUtilHelper helper = new DataDataStreamUtilHelper();
 		assertEquals(helper.help(),"valid");
     }
+@Test
+public void testOtherFalseDataDataStreamUtil() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
 }
-
+@Test
+public void testThisFalseDataDataStreamUtil() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+}

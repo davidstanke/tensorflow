@@ -12,9 +12,19 @@ import org.junit.Test;
 
 public class ProcFetchMapDataStructHelperTest {
     @Test
-    public void testHelperProcFetchMapDataStruct() {
+    public void testValidProcFetchMapDataStruct() {
 		ProcFetchMapDataStructHelper helper = new ProcFetchMapDataStructHelper();
 		assertEquals(helper.help(),"valid");
     }
+@Test
+public void testDoubleValidProcFetchMapDataStruct() {
+	ProcFetchMapDataStructHelper helper = new ProcFetchMapDataStructHelper();
+	assertEquals(helper.help() + helper.help(),"validvalid");
 }
-
+@Test
+public void testOtherFalseProcFetchMapDataStruct() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+}

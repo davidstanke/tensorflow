@@ -12,9 +12,25 @@ import org.junit.Test;
 
 public class StructAPIIODataProcHelperTest {
     @Test
-    public void testHelperStructAPIIODataProc() {
+    public void testValidStructAPIIODataProc() {
 		StructAPIIODataProcHelper helper = new StructAPIIODataProcHelper();
 		assertEquals(helper.help(),"valid");
     }
+@Test
+public void testDoubleValidStructAPIIODataProc() {
+	StructAPIIODataProcHelper helper = new StructAPIIODataProcHelper();
+	assertEquals(helper.help() + helper.help(),"validvalid");
 }
-
+@Test
+public void testAnotherFalseStructAPIIODataProc() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+@Test
+public void testThisFalseStructAPIIODataProc() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+}

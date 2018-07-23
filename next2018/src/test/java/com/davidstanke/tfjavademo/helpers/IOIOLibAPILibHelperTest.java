@@ -12,9 +12,14 @@ import org.junit.Test;
 
 public class IOIOLibAPILibHelperTest {
     @Test
-    public void testHelperIOIOLibAPILib() {
+    public void testValidIOIOLibAPILib() {
 		IOIOLibAPILibHelper helper = new IOIOLibAPILibHelper();
 		assertEquals(helper.help(),"valid");
     }
+@Test
+public void testThisFalseIOIOLibAPILib() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
 }
-
+}

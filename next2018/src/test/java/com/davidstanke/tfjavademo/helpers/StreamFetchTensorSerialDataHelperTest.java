@@ -12,9 +12,20 @@ import org.junit.Test;
 
 public class StreamFetchTensorSerialDataHelperTest {
     @Test
-    public void testHelperStreamFetchTensorSerialData() {
+    public void testValidStreamFetchTensorSerialData() {
 		StreamFetchTensorSerialDataHelper helper = new StreamFetchTensorSerialDataHelper();
 		assertEquals(helper.help(),"valid");
     }
+@Test
+public void testOtherFalseStreamFetchTensorSerialData() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
 }
-
+@Test
+public void testAnotherFalseStreamFetchTensorSerialData() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+}

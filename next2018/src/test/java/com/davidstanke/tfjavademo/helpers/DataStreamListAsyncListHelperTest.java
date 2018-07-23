@@ -12,9 +12,19 @@ import org.junit.Test;
 
 public class DataStreamListAsyncListHelperTest {
     @Test
-    public void testHelperDataStreamListAsyncList() {
+    public void testValidDataStreamListAsyncList() {
 		DataStreamListAsyncListHelper helper = new DataStreamListAsyncListHelper();
 		assertEquals(helper.help(),"valid");
     }
+@Test
+public void testDoubleValidDataStreamListAsyncList() {
+	DataStreamListAsyncListHelper helper = new DataStreamListAsyncListHelper();
+	assertEquals(helper.help() + helper.help(),"validvalid");
 }
-
+@Test
+public void testFalseDataStreamListAsyncList() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+}

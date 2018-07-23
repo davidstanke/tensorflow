@@ -12,9 +12,25 @@ import org.junit.Test;
 
 public class ProcMapAPIAsyncHelperTest {
     @Test
-    public void testHelperProcMapAPIAsync() {
+    public void testValidProcMapAPIAsync() {
 		ProcMapAPIAsyncHelper helper = new ProcMapAPIAsyncHelper();
 		assertEquals(helper.help(),"valid");
     }
+@Test
+public void testDoubleValidProcMapAPIAsync() {
+	ProcMapAPIAsyncHelper helper = new ProcMapAPIAsyncHelper();
+	assertEquals(helper.help() + helper.help(),"validvalid");
 }
-
+@Test
+public void testOtherFalseProcMapAPIAsync() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+@Test
+public void testThisFalseProcMapAPIAsync() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+}

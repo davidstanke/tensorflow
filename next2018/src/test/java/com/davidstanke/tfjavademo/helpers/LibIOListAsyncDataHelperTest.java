@@ -12,9 +12,25 @@ import org.junit.Test;
 
 public class LibIOListAsyncDataHelperTest {
     @Test
-    public void testHelperLibIOListAsyncData() {
+    public void testValidLibIOListAsyncData() {
 		LibIOListAsyncDataHelper helper = new LibIOListAsyncDataHelper();
 		assertEquals(helper.help(),"valid");
     }
+@Test
+public void testDoubleValidLibIOListAsyncData() {
+	LibIOListAsyncDataHelper helper = new LibIOListAsyncDataHelper();
+	assertEquals(helper.help() + helper.help(),"validvalid");
 }
-
+@Test
+public void testFalseLibIOListAsyncData() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+@Test
+public void testOtherFalseLibIOListAsyncData() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+}

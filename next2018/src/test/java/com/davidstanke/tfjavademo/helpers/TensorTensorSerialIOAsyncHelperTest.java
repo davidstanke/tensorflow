@@ -12,9 +12,25 @@ import org.junit.Test;
 
 public class TensorTensorSerialIOAsyncHelperTest {
     @Test
-    public void testHelperTensorTensorSerialIOAsync() {
+    public void testValidTensorTensorSerialIOAsync() {
 		TensorTensorSerialIOAsyncHelper helper = new TensorTensorSerialIOAsyncHelper();
 		assertEquals(helper.help(),"valid");
     }
+@Test
+public void testDoubleValidTensorTensorSerialIOAsync() {
+	TensorTensorSerialIOAsyncHelper helper = new TensorTensorSerialIOAsyncHelper();
+	assertEquals(helper.help() + helper.help(),"validvalid");
 }
-
+@Test
+public void testFalseTensorTensorSerialIOAsync() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+@Test
+public void testAnotherFalseTensorTensorSerialIOAsync() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+}

@@ -12,9 +12,20 @@ import org.junit.Test;
 
 public class ProxyStringIOWriteFetchHelperTest {
     @Test
-    public void testHelperProxyStringIOWriteFetch() {
+    public void testValidProxyStringIOWriteFetch() {
 		ProxyStringIOWriteFetchHelper helper = new ProxyStringIOWriteFetchHelper();
 		assertEquals(helper.help(),"valid");
     }
+@Test
+public void testAnotherFalseProxyStringIOWriteFetch() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
 }
-
+@Test
+public void testThisFalseProxyStringIOWriteFetch() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+}

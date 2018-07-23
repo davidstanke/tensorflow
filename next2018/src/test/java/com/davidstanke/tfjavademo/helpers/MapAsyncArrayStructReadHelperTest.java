@@ -12,9 +12,14 @@ import org.junit.Test;
 
 public class MapAsyncArrayStructReadHelperTest {
     @Test
-    public void testHelperMapAsyncArrayStructRead() {
+    public void testValidMapAsyncArrayStructRead() {
 		MapAsyncArrayStructReadHelper helper = new MapAsyncArrayStructReadHelper();
 		assertEquals(helper.help(),"valid");
     }
+@Test
+public void testAnotherFalseMapAsyncArrayStructRead() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
 }
-
+}

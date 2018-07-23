@@ -12,9 +12,26 @@ import org.junit.Test;
 
 public class ReadFetchDataStreamStructHelperTest {
     @Test
-    public void testHelperReadFetchDataStreamStruct() {
+    public void testValidReadFetchDataStreamStruct() {
 		ReadFetchDataStreamStructHelper helper = new ReadFetchDataStreamStructHelper();
 		assertEquals(helper.help(),"valid");
     }
+@Test
+public void testFalseReadFetchDataStreamStruct() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
 }
-
+@Test
+public void testOtherFalseReadFetchDataStreamStruct() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+@Test
+public void testAnotherFalseReadFetchDataStreamStruct() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+}

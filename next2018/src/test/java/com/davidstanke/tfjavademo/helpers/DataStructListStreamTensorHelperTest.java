@@ -12,9 +12,13 @@ import org.junit.Test;
 
 public class DataStructListStreamTensorHelperTest {
     @Test
-    public void testHelperDataStructListStreamTensor() {
+    public void testValidDataStructListStreamTensor() {
 		DataStructListStreamTensorHelper helper = new DataStructListStreamTensorHelper();
 		assertEquals(helper.help(),"valid");
     }
+@Test
+public void testDoubleValidDataStructListStreamTensor() {
+	DataStructListStreamTensorHelper helper = new DataStructListStreamTensorHelper();
+	assertEquals(helper.help() + helper.help(),"validvalid");
 }
-
+}

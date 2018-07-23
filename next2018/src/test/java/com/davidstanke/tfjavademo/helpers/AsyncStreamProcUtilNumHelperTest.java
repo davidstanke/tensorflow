@@ -12,9 +12,25 @@ import org.junit.Test;
 
 public class AsyncStreamProcUtilNumHelperTest {
     @Test
-    public void testHelperAsyncStreamProcUtilNum() {
+    public void testValidAsyncStreamProcUtilNum() {
 		AsyncStreamProcUtilNumHelper helper = new AsyncStreamProcUtilNumHelper();
 		assertEquals(helper.help(),"valid");
     }
+@Test
+public void testDoubleValidAsyncStreamProcUtilNum() {
+	AsyncStreamProcUtilNumHelper helper = new AsyncStreamProcUtilNumHelper();
+	assertEquals(helper.help() + helper.help(),"validvalid");
 }
-
+@Test
+public void testAnotherFalseAsyncStreamProcUtilNum() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+@Test
+public void testThisFalseAsyncStreamProcUtilNum() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+}

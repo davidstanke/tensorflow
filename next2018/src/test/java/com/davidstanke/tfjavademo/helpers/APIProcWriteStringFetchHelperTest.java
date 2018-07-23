@@ -12,9 +12,19 @@ import org.junit.Test;
 
 public class APIProcWriteStringFetchHelperTest {
     @Test
-    public void testHelperAPIProcWriteStringFetch() {
+    public void testValidAPIProcWriteStringFetch() {
 		APIProcWriteStringFetchHelper helper = new APIProcWriteStringFetchHelper();
 		assertEquals(helper.help(),"valid");
     }
+@Test
+public void testDoubleValidAPIProcWriteStringFetch() {
+	APIProcWriteStringFetchHelper helper = new APIProcWriteStringFetchHelper();
+	assertEquals(helper.help() + helper.help(),"validvalid");
 }
-
+@Test
+public void testAnotherFalseAPIProcWriteStringFetch() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+}

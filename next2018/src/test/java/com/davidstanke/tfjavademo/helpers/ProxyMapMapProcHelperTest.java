@@ -12,9 +12,14 @@ import org.junit.Test;
 
 public class ProxyMapMapProcHelperTest {
     @Test
-    public void testHelperProxyMapMapProc() {
+    public void testValidProxyMapMapProc() {
 		ProxyMapMapProcHelper helper = new ProxyMapMapProcHelper();
 		assertEquals(helper.help(),"valid");
     }
+@Test
+public void testOtherFalseProxyMapMapProc() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
 }
-
+}

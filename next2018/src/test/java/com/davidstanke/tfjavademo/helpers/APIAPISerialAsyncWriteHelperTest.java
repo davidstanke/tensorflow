@@ -12,9 +12,14 @@ import org.junit.Test;
 
 public class APIAPISerialAsyncWriteHelperTest {
     @Test
-    public void testHelperAPIAPISerialAsyncWrite() {
+    public void testValidAPIAPISerialAsyncWrite() {
 		APIAPISerialAsyncWriteHelper helper = new APIAPISerialAsyncWriteHelper();
 		assertEquals(helper.help(),"valid");
     }
+@Test
+public void testThisFalseAPIAPISerialAsyncWrite() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
 }
-
+}

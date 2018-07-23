@@ -12,9 +12,20 @@ import org.junit.Test;
 
 public class IOMapSerialSerialHelperTest {
     @Test
-    public void testHelperIOMapSerialSerial() {
+    public void testValidIOMapSerialSerial() {
 		IOMapSerialSerialHelper helper = new IOMapSerialSerialHelper();
 		assertEquals(helper.help(),"valid");
     }
+@Test
+public void testAnotherFalseIOMapSerialSerial() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
 }
-
+@Test
+public void testThisFalseIOMapSerialSerial() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+}

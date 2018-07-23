@@ -12,9 +12,14 @@ import org.junit.Test;
 
 public class UtilStringProxyHelperTest {
     @Test
-    public void testHelperUtilStringProxy() {
+    public void testValidUtilStringProxy() {
 		UtilStringProxyHelper helper = new UtilStringProxyHelper();
 		assertEquals(helper.help(),"valid");
     }
+@Test
+public void testAnotherFalseUtilStringProxy() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
 }
-
+}

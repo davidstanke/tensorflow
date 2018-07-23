@@ -14,5 +14,8 @@ import %workspace%/tools/rbe.bazelrc
 # Suppress noisy warnings
 build --output_filter=SUPPRESS_ALL
 
+# Disable errorprone checks
+test --javacopt="-XepDisableAllChecks"
+
 # Keep the Bazel server alive for a long time (so it can be warmed up in advance of the demo and stay warm)
 startup --max_idle_secs=86400

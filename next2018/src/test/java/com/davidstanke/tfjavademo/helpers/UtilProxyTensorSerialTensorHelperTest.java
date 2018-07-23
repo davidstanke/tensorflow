@@ -12,9 +12,19 @@ import org.junit.Test;
 
 public class UtilProxyTensorSerialTensorHelperTest {
     @Test
-    public void testHelperUtilProxyTensorSerialTensor() {
+    public void testValidUtilProxyTensorSerialTensor() {
 		UtilProxyTensorSerialTensorHelper helper = new UtilProxyTensorSerialTensorHelper();
 		assertEquals(helper.help(),"valid");
     }
+@Test
+public void testDoubleValidUtilProxyTensorSerialTensor() {
+	UtilProxyTensorSerialTensorHelper helper = new UtilProxyTensorSerialTensorHelper();
+	assertEquals(helper.help() + helper.help(),"validvalid");
 }
-
+@Test
+public void testThisFalseUtilProxyTensorSerialTensor() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+}

@@ -12,9 +12,31 @@ import org.junit.Test;
 
 public class FetchNumStructListHelperTest {
     @Test
-    public void testHelperFetchNumStructList() {
+    public void testValidFetchNumStructList() {
 		FetchNumStructListHelper helper = new FetchNumStructListHelper();
 		assertEquals(helper.help(),"valid");
     }
+@Test
+public void testDoubleValidFetchNumStructList() {
+	FetchNumStructListHelper helper = new FetchNumStructListHelper();
+	assertEquals(helper.help() + helper.help(),"validvalid");
 }
-
+@Test
+public void testFalseFetchNumStructList() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+@Test
+public void testOtherFalseFetchNumStructList() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+@Test
+public void testAnotherFalseFetchNumStructList() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+}

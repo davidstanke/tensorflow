@@ -12,9 +12,14 @@ import org.junit.Test;
 
 public class ProxyAsyncLibIOListHelperTest {
     @Test
-    public void testHelperProxyAsyncLibIOList() {
+    public void testValidProxyAsyncLibIOList() {
 		ProxyAsyncLibIOListHelper helper = new ProxyAsyncLibIOListHelper();
 		assertEquals(helper.help(),"valid");
     }
+@Test
+public void testOtherFalseProxyAsyncLibIOList() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
 }
-
+}

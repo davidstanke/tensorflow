@@ -12,9 +12,19 @@ import org.junit.Test;
 
 public class TensorStructStreamStringReadHelperTest {
     @Test
-    public void testHelperTensorStructStreamStringRead() {
+    public void testValidTensorStructStreamStringRead() {
 		TensorStructStreamStringReadHelper helper = new TensorStructStreamStringReadHelper();
 		assertEquals(helper.help(),"valid");
     }
+@Test
+public void testDoubleValidTensorStructStreamStringRead() {
+	TensorStructStreamStringReadHelper helper = new TensorStructStreamStringReadHelper();
+	assertEquals(helper.help() + helper.help(),"validvalid");
 }
-
+@Test
+public void testOtherFalseTensorStructStreamStringRead() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+}

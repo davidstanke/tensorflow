@@ -12,9 +12,31 @@ import org.junit.Test;
 
 public class NumDataAPIStringListHelperTest {
     @Test
-    public void testHelperNumDataAPIStringList() {
+    public void testValidNumDataAPIStringList() {
 		NumDataAPIStringListHelper helper = new NumDataAPIStringListHelper();
 		assertEquals(helper.help(),"valid");
     }
+@Test
+public void testDoubleValidNumDataAPIStringList() {
+	NumDataAPIStringListHelper helper = new NumDataAPIStringListHelper();
+	assertEquals(helper.help() + helper.help(),"validvalid");
 }
-
+@Test
+public void testFalseNumDataAPIStringList() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+@Test
+public void testOtherFalseNumDataAPIStringList() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+@Test
+public void testThisFalseNumDataAPIStringList() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+}

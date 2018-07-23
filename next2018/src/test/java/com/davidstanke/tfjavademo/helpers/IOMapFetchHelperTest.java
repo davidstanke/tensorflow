@@ -12,9 +12,19 @@ import org.junit.Test;
 
 public class IOMapFetchHelperTest {
     @Test
-    public void testHelperIOMapFetch() {
+    public void testValidIOMapFetch() {
 		IOMapFetchHelper helper = new IOMapFetchHelper();
 		assertEquals(helper.help(),"valid");
     }
+@Test
+public void testDoubleValidIOMapFetch() {
+	IOMapFetchHelper helper = new IOMapFetchHelper();
+	assertEquals(helper.help() + helper.help(),"validvalid");
 }
-
+@Test
+public void testAnotherFalseIOMapFetch() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+}

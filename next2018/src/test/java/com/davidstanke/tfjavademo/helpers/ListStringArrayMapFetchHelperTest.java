@@ -12,9 +12,19 @@ import org.junit.Test;
 
 public class ListStringArrayMapFetchHelperTest {
     @Test
-    public void testHelperListStringArrayMapFetch() {
+    public void testValidListStringArrayMapFetch() {
 		ListStringArrayMapFetchHelper helper = new ListStringArrayMapFetchHelper();
 		assertEquals(helper.help(),"valid");
     }
+@Test
+public void testDoubleValidListStringArrayMapFetch() {
+	ListStringArrayMapFetchHelper helper = new ListStringArrayMapFetchHelper();
+	assertEquals(helper.help() + helper.help(),"validvalid");
 }
-
+@Test
+public void testThisFalseListStringArrayMapFetch() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+}

@@ -12,9 +12,20 @@ import org.junit.Test;
 
 public class ListStructStructHelperTest {
     @Test
-    public void testHelperListStructStruct() {
+    public void testValidListStructStruct() {
 		ListStructStructHelper helper = new ListStructStructHelper();
 		assertEquals(helper.help(),"valid");
     }
+@Test
+public void testFalseListStructStruct() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
 }
-
+@Test
+public void testAnotherFalseListStructStruct() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+}

@@ -12,9 +12,26 @@ import org.junit.Test;
 
 public class AsyncAPINumHelperTest {
     @Test
-    public void testHelperAsyncAPINum() {
+    public void testValidAsyncAPINum() {
 		AsyncAPINumHelper helper = new AsyncAPINumHelper();
 		assertEquals(helper.help(),"valid");
     }
+@Test
+public void testOtherFalseAsyncAPINum() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
 }
-
+@Test
+public void testAnotherFalseAsyncAPINum() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+@Test
+public void testThisFalseAsyncAPINum() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+}

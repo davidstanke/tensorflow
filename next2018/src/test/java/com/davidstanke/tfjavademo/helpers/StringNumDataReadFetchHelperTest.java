@@ -12,9 +12,19 @@ import org.junit.Test;
 
 public class StringNumDataReadFetchHelperTest {
     @Test
-    public void testHelperStringNumDataReadFetch() {
+    public void testValidStringNumDataReadFetch() {
 		StringNumDataReadFetchHelper helper = new StringNumDataReadFetchHelper();
 		assertEquals(helper.help(),"valid");
     }
+@Test
+public void testDoubleValidStringNumDataReadFetch() {
+	StringNumDataReadFetchHelper helper = new StringNumDataReadFetchHelper();
+	assertEquals(helper.help() + helper.help(),"validvalid");
 }
-
+@Test
+public void testAnotherFalseStringNumDataReadFetch() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+}

@@ -12,9 +12,19 @@ import org.junit.Test;
 
 public class StructProxyProcArrayDataHelperTest {
     @Test
-    public void testHelperStructProxyProcArrayData() {
+    public void testValidStructProxyProcArrayData() {
 		StructProxyProcArrayDataHelper helper = new StructProxyProcArrayDataHelper();
 		assertEquals(helper.help(),"valid");
     }
+@Test
+public void testDoubleValidStructProxyProcArrayData() {
+	StructProxyProcArrayDataHelper helper = new StructProxyProcArrayDataHelper();
+	assertEquals(helper.help() + helper.help(),"validvalid");
 }
-
+@Test
+public void testThisFalseStructProxyProcArrayData() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+}

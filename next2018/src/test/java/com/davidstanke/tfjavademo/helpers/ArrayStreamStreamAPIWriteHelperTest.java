@@ -12,9 +12,20 @@ import org.junit.Test;
 
 public class ArrayStreamStreamAPIWriteHelperTest {
     @Test
-    public void testHelperArrayStreamStreamAPIWrite() {
+    public void testValidArrayStreamStreamAPIWrite() {
 		ArrayStreamStreamAPIWriteHelper helper = new ArrayStreamStreamAPIWriteHelper();
 		assertEquals(helper.help(),"valid");
     }
+@Test
+public void testOtherFalseArrayStreamStreamAPIWrite() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
 }
-
+@Test
+public void testAnotherFalseArrayStreamStreamAPIWrite() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+}

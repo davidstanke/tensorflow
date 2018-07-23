@@ -12,9 +12,25 @@ import org.junit.Test;
 
 public class AsyncUtilNumListListHelperTest {
     @Test
-    public void testHelperAsyncUtilNumListList() {
+    public void testValidAsyncUtilNumListList() {
 		AsyncUtilNumListListHelper helper = new AsyncUtilNumListListHelper();
 		assertEquals(helper.help(),"valid");
     }
+@Test
+public void testDoubleValidAsyncUtilNumListList() {
+	AsyncUtilNumListListHelper helper = new AsyncUtilNumListListHelper();
+	assertEquals(helper.help() + helper.help(),"validvalid");
 }
-
+@Test
+public void testOtherFalseAsyncUtilNumListList() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+@Test
+public void testThisFalseAsyncUtilNumListList() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+}

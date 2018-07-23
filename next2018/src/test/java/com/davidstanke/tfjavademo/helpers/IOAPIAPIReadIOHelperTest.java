@@ -12,9 +12,25 @@ import org.junit.Test;
 
 public class IOAPIAPIReadIOHelperTest {
     @Test
-    public void testHelperIOAPIAPIReadIO() {
+    public void testValidIOAPIAPIReadIO() {
 		IOAPIAPIReadIOHelper helper = new IOAPIAPIReadIOHelper();
 		assertEquals(helper.help(),"valid");
     }
+@Test
+public void testDoubleValidIOAPIAPIReadIO() {
+	IOAPIAPIReadIOHelper helper = new IOAPIAPIReadIOHelper();
+	assertEquals(helper.help() + helper.help(),"validvalid");
 }
-
+@Test
+public void testOtherFalseIOAPIAPIReadIO() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+@Test
+public void testAnotherFalseIOAPIAPIReadIO() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+}
