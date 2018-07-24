@@ -25,48 +25,6 @@ public class StreamMapSerialWriteHelperTest {
 		assertEquals(helper.help(),"valid");
     }
 @Test
-public void testDoubleValidStreamMapSerialWrite() {
-	StreamMapSerialWriteHelper helper = new StreamMapSerialWriteHelper();
-	
-	try{
-    		
-	    //create a temp file
-	    File temp = File.createTempFile("tempfileStreamMapSerialWriteHelper", ".tmp"); 
-		//Get tempropary file path
-		String absolutePath = temp.getAbsolutePath();
-		String tempFilePath = absolutePath.
-		    substring(0,absolutePath.lastIndexOf(File.separator));
-
-		//System.out.println("Temp file path : " + tempFilePath);
-	
-    //write it
-	    BufferedWriter bw = new BufferedWriter(new FileWriter(temp));
-	    for(int i=0; i<2999999; i++) {
-			bw.write(i + "\n");
-		}
-	    bw.close();
-		
-		// read it
-		byte[] myBytes = Files.readAllBytes(temp.toPath());
-		
-		// randomize it
-		List<Byte> myBytesList = new ArrayList<>();
-		for(int i = 1; i<myBytes.length; i++) {
-			myBytesList.add(myBytes[i]);
-		}
-		Collections.shuffle(myBytesList);
-		
-		
-		
-	}catch(IOException e){
-	
-	    e.printStackTrace();
-	
-	}
-	
-	assertEquals(helper.help() + helper.help(),"validvalid");
-}
-@Test
 public void testFalseStreamMapSerialWrite() {
 	assertFalse(1==2);
 	assertFalse(2==3);
@@ -86,226 +44,226 @@ public void testThisFalseStreamMapSerialWrite() {
 }
 @Test
 public void bigFalseTestStreamMapSerialWrite0() {
-	assertFalse(8498==8498+1);
+	assertFalse(14546==14546+1);
 }
 @Test
 public void bigFalseTestStreamMapSerialWrite1() {
-	assertFalse(4839==4839+1);
+	assertFalse(19697==19697+1);
 }
 @Test
 public void bigFalseTestStreamMapSerialWrite2() {
-	assertFalse(4731==4731+1);
+	assertFalse(13173==13173+1);
 }
 @Test
 public void bigFalseTestStreamMapSerialWrite3() {
-	assertFalse(5233==5233+1);
+	assertFalse(7117==7117+1);
 }
 @Test
 public void bigFalseTestStreamMapSerialWrite4() {
-	assertFalse(16020==16020+1);
+	assertFalse(28287==28287+1);
 }
 @Test
 public void bigFalseTestStreamMapSerialWrite5() {
-	assertFalse(30481==30481+1);
+	assertFalse(24015==24015+1);
 }
 @Test
 public void bigFalseTestStreamMapSerialWrite6() {
-	assertFalse(9362==9362+1);
+	assertFalse(16701==16701+1);
 }
 @Test
 public void bigFalseTestStreamMapSerialWrite7() {
-	assertFalse(17399==17399+1);
+	assertFalse(30127==30127+1);
 }
 @Test
 public void bigFalseTestStreamMapSerialWrite8() {
-	assertFalse(21701==21701+1);
+	assertFalse(27675==27675+1);
 }
 @Test
 public void bigFalseTestStreamMapSerialWrite9() {
-	assertFalse(3489==3489+1);
+	assertFalse(1847==1847+1);
 }
 @Test
 public void bigFalseTestStreamMapSerialWrite10() {
-	assertFalse(29051==29051+1);
+	assertFalse(11231==11231+1);
 }
 @Test
 public void bigFalseTestStreamMapSerialWrite11() {
-	assertFalse(14758==14758+1);
+	assertFalse(22990==22990+1);
 }
 @Test
 public void bigFalseTestStreamMapSerialWrite12() {
-	assertFalse(6184==6184+1);
+	assertFalse(23520==23520+1);
 }
 @Test
 public void bigFalseTestStreamMapSerialWrite13() {
-	assertFalse(29495==29495+1);
+	assertFalse(17157==17157+1);
 }
 @Test
 public void bigFalseTestStreamMapSerialWrite14() {
-	assertFalse(21978==21978+1);
+	assertFalse(30754==30754+1);
 }
 @Test
 public void bigFalseTestStreamMapSerialWrite15() {
-	assertFalse(14846==14846+1);
+	assertFalse(21772==21772+1);
 }
 @Test
 public void bigFalseTestStreamMapSerialWrite16() {
-	assertFalse(11964==11964+1);
+	assertFalse(6119==6119+1);
 }
 @Test
 public void bigFalseTestStreamMapSerialWrite17() {
-	assertFalse(26284==26284+1);
+	assertFalse(6619==6619+1);
 }
 @Test
 public void bigFalseTestStreamMapSerialWrite18() {
-	assertFalse(4893==4893+1);
+	assertFalse(26385==26385+1);
 }
 @Test
 public void bigFalseTestStreamMapSerialWrite19() {
-	assertFalse(14925==14925+1);
+	assertFalse(24189==24189+1);
 }
 @Test
 public void bigFalseTestStreamMapSerialWrite20() {
-	assertFalse(3370==3370+1);
+	assertFalse(10342==10342+1);
 }
 @Test
 public void bigFalseTestStreamMapSerialWrite21() {
-	assertFalse(3895==3895+1);
+	assertFalse(10925==10925+1);
 }
 @Test
 public void bigFalseTestStreamMapSerialWrite22() {
-	assertFalse(12648==12648+1);
+	assertFalse(21658==21658+1);
 }
 @Test
 public void bigFalseTestStreamMapSerialWrite23() {
-	assertFalse(31286==31286+1);
+	assertFalse(10197==10197+1);
 }
 @Test
 public void bigFalseTestStreamMapSerialWrite24() {
-	assertFalse(6286==6286+1);
+	assertFalse(27049==27049+1);
 }
 @Test
 public void bigFalseTestStreamMapSerialWrite25() {
-	assertFalse(2114==2114+1);
+	assertFalse(7945==7945+1);
 }
 @Test
 public void bigFalseTestStreamMapSerialWrite26() {
-	assertFalse(5188==5188+1);
+	assertFalse(25576==25576+1);
 }
 @Test
 public void bigFalseTestStreamMapSerialWrite27() {
-	assertFalse(14563==14563+1);
+	assertFalse(2193==2193+1);
 }
 @Test
 public void bigFalseTestStreamMapSerialWrite28() {
-	assertFalse(6405==6405+1);
+	assertFalse(5586==5586+1);
 }
 @Test
 public void bigFalseTestStreamMapSerialWrite29() {
-	assertFalse(20234==20234+1);
+	assertFalse(6183==6183+1);
 }
 @Test
 public void bigFalseTestStreamMapSerialWrite30() {
-	assertFalse(11784==11784+1);
+	assertFalse(5504==5504+1);
 }
 @Test
 public void bigFalseTestStreamMapSerialWrite31() {
-	assertFalse(522==522+1);
+	assertFalse(28648==28648+1);
 }
 @Test
 public void bigFalseTestStreamMapSerialWrite32() {
-	assertFalse(18683==18683+1);
+	assertFalse(11856==11856+1);
 }
 @Test
 public void bigFalseTestStreamMapSerialWrite33() {
-	assertFalse(28153==28153+1);
+	assertFalse(24757==24757+1);
 }
 @Test
 public void bigFalseTestStreamMapSerialWrite34() {
-	assertFalse(32259==32259+1);
+	assertFalse(8989==8989+1);
 }
 @Test
 public void bigFalseTestStreamMapSerialWrite35() {
-	assertFalse(20129==20129+1);
+	assertFalse(2416==2416+1);
 }
 @Test
 public void bigFalseTestStreamMapSerialWrite36() {
-	assertFalse(3377==3377+1);
+	assertFalse(288==288+1);
 }
 @Test
 public void bigFalseTestStreamMapSerialWrite37() {
-	assertFalse(451==451+1);
+	assertFalse(28511==28511+1);
 }
 @Test
 public void bigFalseTestStreamMapSerialWrite38() {
-	assertFalse(17775==17775+1);
+	assertFalse(15692==15692+1);
 }
 @Test
 public void bigFalseTestStreamMapSerialWrite39() {
-	assertFalse(30048==30048+1);
+	assertFalse(145==145+1);
 }
 @Test
 public void bigFalseTestStreamMapSerialWrite40() {
-	assertFalse(8593==8593+1);
+	assertFalse(17862==17862+1);
 }
 @Test
 public void bigFalseTestStreamMapSerialWrite41() {
-	assertFalse(29762==29762+1);
+	assertFalse(1568==1568+1);
 }
 @Test
 public void bigFalseTestStreamMapSerialWrite42() {
-	assertFalse(7957==7957+1);
+	assertFalse(1736==1736+1);
 }
 @Test
 public void bigFalseTestStreamMapSerialWrite43() {
-	assertFalse(9979==9979+1);
+	assertFalse(3754==3754+1);
 }
 @Test
 public void bigFalseTestStreamMapSerialWrite44() {
-	assertFalse(18098==18098+1);
+	assertFalse(3594==3594+1);
 }
 @Test
 public void bigFalseTestStreamMapSerialWrite45() {
-	assertFalse(2322==2322+1);
+	assertFalse(31307==31307+1);
 }
 @Test
 public void bigFalseTestStreamMapSerialWrite46() {
-	assertFalse(26047==26047+1);
+	assertFalse(27027==27027+1);
 }
 @Test
 public void bigFalseTestStreamMapSerialWrite47() {
-	assertFalse(29212==29212+1);
+	assertFalse(16389==16389+1);
 }
 @Test
 public void bigFalseTestStreamMapSerialWrite48() {
-	assertFalse(15401==15401+1);
+	assertFalse(1651==1651+1);
 }
 @Test
 public void bigFalseTestStreamMapSerialWrite49() {
-	assertFalse(6124==6124+1);
+	assertFalse(29016==29016+1);
 }
 @Test
 public void bigFalseTestStreamMapSerialWrite50() {
-	assertFalse(5474==5474+1);
+	assertFalse(8664==8664+1);
 }
 @Test
 public void bigFalseTestStreamMapSerialWrite51() {
-	assertFalse(2850==2850+1);
+	assertFalse(7035==7035+1);
 }
 @Test
 public void bigFalseTestStreamMapSerialWrite52() {
-	assertFalse(5013==5013+1);
+	assertFalse(17029==17029+1);
 }
 @Test
 public void bigFalseTestStreamMapSerialWrite53() {
-	assertFalse(4291==4291+1);
+	assertFalse(7791==7791+1);
 }
 @Test
 public void bigFalseTestStreamMapSerialWrite54() {
-	assertFalse(4872==4872+1);
+	assertFalse(6788==6788+1);
 }
 @Test
 public void bigFalseTestStreamMapSerialWrite55() {
-	assertFalse(21404==21404+1);
+	assertFalse(6374==6374+1);
 }
 }

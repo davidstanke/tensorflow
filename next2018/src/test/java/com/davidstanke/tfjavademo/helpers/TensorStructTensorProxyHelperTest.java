@@ -25,66 +25,6 @@ public class TensorStructTensorProxyHelperTest {
 		assertEquals(helper.help(),"valid");
     }
 @Test
-public void testDoubleValidTensorStructTensorProxy() {
-	TensorStructTensorProxyHelper helper = new TensorStructTensorProxyHelper();
-	
-	try{
-    		
-	    //create a temp file
-	    File temp = File.createTempFile("tempfileTensorStructTensorProxyHelper", ".tmp"); 
-		//Get tempropary file path
-		String absolutePath = temp.getAbsolutePath();
-		String tempFilePath = absolutePath.
-		    substring(0,absolutePath.lastIndexOf(File.separator));
-
-		//System.out.println("Temp file path : " + tempFilePath);
-	
-    //write it
-	    BufferedWriter bw = new BufferedWriter(new FileWriter(temp));
-	    for(int i=0; i<2999999; i++) {
-			bw.write(i + "\n");
-		}
-	    bw.close();
-		
-		// read it
-		byte[] myBytes = Files.readAllBytes(temp.toPath());
-		
-		// randomize it
-		List<Byte> myBytesList = new ArrayList<>();
-		for(int i = 1; i<myBytes.length; i++) {
-			myBytesList.add(myBytes[i]);
-		}
-		Collections.shuffle(myBytesList);
-		
-		
-		
-	}catch(IOException e){
-	
-	    e.printStackTrace();
-	
-	}
-	
-	assertEquals(helper.help() + helper.help(),"validvalid");
-}
-@Test
-public void testFalseTensorStructTensorProxy() {
-	assertFalse(1==2);
-	assertFalse(2==3);
-	assertFalse(1==3);
-}
-@Test
-public void testOtherFalseTensorStructTensorProxy() {
-	assertFalse(1==2);
-	assertFalse(2==3);
-	assertFalse(1==3);
-}
-@Test
-public void testAnotherFalseTensorStructTensorProxy() {
-	assertFalse(1==2);
-	assertFalse(2==3);
-	assertFalse(1==3);
-}
-@Test
 public void testThisFalseTensorStructTensorProxy() {
 	assertFalse(1==2);
 	assertFalse(2==3);
@@ -92,226 +32,226 @@ public void testThisFalseTensorStructTensorProxy() {
 }
 @Test
 public void bigFalseTestTensorStructTensorProxy0() {
-	assertFalse(28396==28396+1);
+	assertFalse(24228==24228+1);
 }
 @Test
 public void bigFalseTestTensorStructTensorProxy1() {
-	assertFalse(1103==1103+1);
+	assertFalse(17799==17799+1);
 }
 @Test
 public void bigFalseTestTensorStructTensorProxy2() {
-	assertFalse(15876==15876+1);
+	assertFalse(899==899+1);
 }
 @Test
 public void bigFalseTestTensorStructTensorProxy3() {
-	assertFalse(31239==31239+1);
+	assertFalse(5960==5960+1);
 }
 @Test
 public void bigFalseTestTensorStructTensorProxy4() {
-	assertFalse(25690==25690+1);
+	assertFalse(19028==19028+1);
 }
 @Test
 public void bigFalseTestTensorStructTensorProxy5() {
-	assertFalse(4580==4580+1);
+	assertFalse(20472==20472+1);
 }
 @Test
 public void bigFalseTestTensorStructTensorProxy6() {
-	assertFalse(19242==19242+1);
+	assertFalse(10703==10703+1);
 }
 @Test
 public void bigFalseTestTensorStructTensorProxy7() {
-	assertFalse(22099==22099+1);
+	assertFalse(25371==25371+1);
 }
 @Test
 public void bigFalseTestTensorStructTensorProxy8() {
-	assertFalse(14100==14100+1);
+	assertFalse(22421==22421+1);
 }
 @Test
 public void bigFalseTestTensorStructTensorProxy9() {
-	assertFalse(19537==19537+1);
+	assertFalse(11808==11808+1);
 }
 @Test
 public void bigFalseTestTensorStructTensorProxy10() {
-	assertFalse(16440==16440+1);
+	assertFalse(29799==29799+1);
 }
 @Test
 public void bigFalseTestTensorStructTensorProxy11() {
-	assertFalse(19819==19819+1);
+	assertFalse(22136==22136+1);
 }
 @Test
 public void bigFalseTestTensorStructTensorProxy12() {
-	assertFalse(5722==5722+1);
+	assertFalse(3543==3543+1);
 }
 @Test
 public void bigFalseTestTensorStructTensorProxy13() {
-	assertFalse(7270==7270+1);
+	assertFalse(19812==19812+1);
 }
 @Test
 public void bigFalseTestTensorStructTensorProxy14() {
-	assertFalse(4993==4993+1);
+	assertFalse(17354==17354+1);
 }
 @Test
 public void bigFalseTestTensorStructTensorProxy15() {
-	assertFalse(20917==20917+1);
+	assertFalse(9431==9431+1);
 }
 @Test
 public void bigFalseTestTensorStructTensorProxy16() {
-	assertFalse(20570==20570+1);
+	assertFalse(9185==9185+1);
 }
 @Test
 public void bigFalseTestTensorStructTensorProxy17() {
-	assertFalse(32395==32395+1);
+	assertFalse(14780==14780+1);
 }
 @Test
 public void bigFalseTestTensorStructTensorProxy18() {
-	assertFalse(27725==27725+1);
+	assertFalse(5787==5787+1);
 }
 @Test
 public void bigFalseTestTensorStructTensorProxy19() {
-	assertFalse(23844==23844+1);
+	assertFalse(7822==7822+1);
 }
 @Test
 public void bigFalseTestTensorStructTensorProxy20() {
-	assertFalse(14325==14325+1);
+	assertFalse(31189==31189+1);
 }
 @Test
 public void bigFalseTestTensorStructTensorProxy21() {
-	assertFalse(671==671+1);
+	assertFalse(22010==22010+1);
 }
 @Test
 public void bigFalseTestTensorStructTensorProxy22() {
-	assertFalse(7047==7047+1);
+	assertFalse(10744==10744+1);
 }
 @Test
 public void bigFalseTestTensorStructTensorProxy23() {
-	assertFalse(14970==14970+1);
+	assertFalse(1==1+1);
 }
 @Test
 public void bigFalseTestTensorStructTensorProxy24() {
-	assertFalse(6988==6988+1);
+	assertFalse(14056==14056+1);
 }
 @Test
 public void bigFalseTestTensorStructTensorProxy25() {
-	assertFalse(28052==28052+1);
+	assertFalse(19675==19675+1);
 }
 @Test
 public void bigFalseTestTensorStructTensorProxy26() {
-	assertFalse(29483==29483+1);
+	assertFalse(17306==17306+1);
 }
 @Test
 public void bigFalseTestTensorStructTensorProxy27() {
-	assertFalse(9790==9790+1);
+	assertFalse(1928==1928+1);
 }
 @Test
 public void bigFalseTestTensorStructTensorProxy28() {
-	assertFalse(5900==5900+1);
+	assertFalse(1757==1757+1);
 }
 @Test
 public void bigFalseTestTensorStructTensorProxy29() {
-	assertFalse(22727==22727+1);
+	assertFalse(1743==1743+1);
 }
 @Test
 public void bigFalseTestTensorStructTensorProxy30() {
-	assertFalse(10350==10350+1);
+	assertFalse(433==433+1);
 }
 @Test
 public void bigFalseTestTensorStructTensorProxy31() {
-	assertFalse(893==893+1);
+	assertFalse(32286==32286+1);
 }
 @Test
 public void bigFalseTestTensorStructTensorProxy32() {
-	assertFalse(21118==21118+1);
+	assertFalse(13126==13126+1);
 }
 @Test
 public void bigFalseTestTensorStructTensorProxy33() {
-	assertFalse(27424==27424+1);
+	assertFalse(12424==12424+1);
 }
 @Test
 public void bigFalseTestTensorStructTensorProxy34() {
-	assertFalse(11434==11434+1);
+	assertFalse(19581==19581+1);
 }
 @Test
 public void bigFalseTestTensorStructTensorProxy35() {
-	assertFalse(8256==8256+1);
+	assertFalse(7887==7887+1);
 }
 @Test
 public void bigFalseTestTensorStructTensorProxy36() {
-	assertFalse(28750==28750+1);
+	assertFalse(5242==5242+1);
 }
 @Test
 public void bigFalseTestTensorStructTensorProxy37() {
-	assertFalse(2030==2030+1);
+	assertFalse(7748==7748+1);
 }
 @Test
 public void bigFalseTestTensorStructTensorProxy38() {
-	assertFalse(10512==10512+1);
+	assertFalse(17836==17836+1);
 }
 @Test
 public void bigFalseTestTensorStructTensorProxy39() {
-	assertFalse(17872==17872+1);
+	assertFalse(2272==2272+1);
 }
 @Test
 public void bigFalseTestTensorStructTensorProxy40() {
-	assertFalse(16406==16406+1);
+	assertFalse(5717==5717+1);
 }
 @Test
 public void bigFalseTestTensorStructTensorProxy41() {
-	assertFalse(3967==3967+1);
+	assertFalse(6107==6107+1);
 }
 @Test
 public void bigFalseTestTensorStructTensorProxy42() {
-	assertFalse(2316==2316+1);
+	assertFalse(20855==20855+1);
 }
 @Test
 public void bigFalseTestTensorStructTensorProxy43() {
-	assertFalse(4268==4268+1);
+	assertFalse(10427==10427+1);
 }
 @Test
 public void bigFalseTestTensorStructTensorProxy44() {
-	assertFalse(31922==31922+1);
+	assertFalse(19634==19634+1);
 }
 @Test
 public void bigFalseTestTensorStructTensorProxy45() {
-	assertFalse(3458==3458+1);
+	assertFalse(22920==22920+1);
 }
 @Test
 public void bigFalseTestTensorStructTensorProxy46() {
-	assertFalse(16247==16247+1);
+	assertFalse(5499==5499+1);
 }
 @Test
 public void bigFalseTestTensorStructTensorProxy47() {
-	assertFalse(19527==19527+1);
+	assertFalse(17313==17313+1);
 }
 @Test
 public void bigFalseTestTensorStructTensorProxy48() {
-	assertFalse(9027==9027+1);
+	assertFalse(21417==21417+1);
 }
 @Test
 public void bigFalseTestTensorStructTensorProxy49() {
-	assertFalse(28957==28957+1);
+	assertFalse(21879==21879+1);
 }
 @Test
 public void bigFalseTestTensorStructTensorProxy50() {
-	assertFalse(12927==12927+1);
+	assertFalse(2391==2391+1);
 }
 @Test
 public void bigFalseTestTensorStructTensorProxy51() {
-	assertFalse(20098==20098+1);
+	assertFalse(4622==4622+1);
 }
 @Test
 public void bigFalseTestTensorStructTensorProxy52() {
-	assertFalse(12031==12031+1);
+	assertFalse(30601==30601+1);
 }
 @Test
 public void bigFalseTestTensorStructTensorProxy53() {
-	assertFalse(10958==10958+1);
+	assertFalse(530==530+1);
 }
 @Test
 public void bigFalseTestTensorStructTensorProxy54() {
-	assertFalse(31318==31318+1);
+	assertFalse(29963==29963+1);
 }
 @Test
 public void bigFalseTestTensorStructTensorProxy55() {
-	assertFalse(3820==3820+1);
+	assertFalse(5355==5355+1);
 }
 }

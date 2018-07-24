@@ -191,7 +191,7 @@ echo '}' >> $FILENAME_TEST
 
 cat >> $BUILD_CONTENTS << EOF
 java_library(name="${THIS_METHOD}",srcs=["src/main/java/com/davidstanke/tfjavademo/helpers/${THIS_METHOD}.java"])
-java_test(name="${THIS_METHOD}Test",srcs=["src/test/java/com/davidstanke/tfjavademo/helpers/${THIS_METHOD}Test.java"],deps=[":${THIS_METHOD}"])
+java_test(name="${THIS_METHOD}Test",srcs=["src/test/java/com/davidstanke/tfjavademo/helpers/${THIS_METHOD}Test.java"],deps=[":${THIS_METHOD}",":Greeter"])
 EOF
 	
 done

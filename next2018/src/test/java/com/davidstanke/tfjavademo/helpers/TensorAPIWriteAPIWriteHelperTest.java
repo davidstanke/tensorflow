@@ -25,7 +25,49 @@ public class TensorAPIWriteAPIWriteHelperTest {
 		assertEquals(helper.help(),"valid");
     }
 @Test
-public void testFalseTensorAPIWriteAPIWrite() {
+public void testDoubleValidTensorAPIWriteAPIWrite() {
+	TensorAPIWriteAPIWriteHelper helper = new TensorAPIWriteAPIWriteHelper();
+	
+	try{
+    		
+	    //create a temp file
+	    File temp = File.createTempFile("tempfileTensorAPIWriteAPIWriteHelper", ".tmp"); 
+		//Get tempropary file path
+		String absolutePath = temp.getAbsolutePath();
+		String tempFilePath = absolutePath.
+		    substring(0,absolutePath.lastIndexOf(File.separator));
+
+		//System.out.println("Temp file path : " + tempFilePath);
+	
+    //write it
+	    BufferedWriter bw = new BufferedWriter(new FileWriter(temp));
+	    for(int i=0; i<2999999; i++) {
+			bw.write(i + "\n");
+		}
+	    bw.close();
+		
+		// read it
+		byte[] myBytes = Files.readAllBytes(temp.toPath());
+		
+		// randomize it
+		List<Byte> myBytesList = new ArrayList<>();
+		for(int i = 1; i<myBytes.length; i++) {
+			myBytesList.add(myBytes[i]);
+		}
+		Collections.shuffle(myBytesList);
+		
+		
+		
+	}catch(IOException e){
+	
+	    e.printStackTrace();
+	
+	}
+	
+	assertEquals(helper.help() + helper.help(),"validvalid");
+}
+@Test
+public void testAnotherFalseTensorAPIWriteAPIWrite() {
 	assertFalse(1==2);
 	assertFalse(2==3);
 	assertFalse(1==3);
@@ -38,226 +80,226 @@ public void testThisFalseTensorAPIWriteAPIWrite() {
 }
 @Test
 public void bigFalseTestTensorAPIWriteAPIWrite0() {
-	assertFalse(17855==17855+1);
+	assertFalse(23010==23010+1);
 }
 @Test
 public void bigFalseTestTensorAPIWriteAPIWrite1() {
-	assertFalse(15927==15927+1);
+	assertFalse(19404==19404+1);
 }
 @Test
 public void bigFalseTestTensorAPIWriteAPIWrite2() {
-	assertFalse(31103==31103+1);
+	assertFalse(6153==6153+1);
 }
 @Test
 public void bigFalseTestTensorAPIWriteAPIWrite3() {
-	assertFalse(25586==25586+1);
+	assertFalse(29216==29216+1);
 }
 @Test
 public void bigFalseTestTensorAPIWriteAPIWrite4() {
-	assertFalse(15041==15041+1);
+	assertFalse(25831==25831+1);
 }
 @Test
 public void bigFalseTestTensorAPIWriteAPIWrite5() {
-	assertFalse(19761==19761+1);
+	assertFalse(12111==12111+1);
 }
 @Test
 public void bigFalseTestTensorAPIWriteAPIWrite6() {
-	assertFalse(31401==31401+1);
+	assertFalse(9736==9736+1);
 }
 @Test
 public void bigFalseTestTensorAPIWriteAPIWrite7() {
-	assertFalse(13699==13699+1);
+	assertFalse(22392==22392+1);
 }
 @Test
 public void bigFalseTestTensorAPIWriteAPIWrite8() {
-	assertFalse(5087==5087+1);
+	assertFalse(26925==26925+1);
 }
 @Test
 public void bigFalseTestTensorAPIWriteAPIWrite9() {
-	assertFalse(17592==17592+1);
+	assertFalse(8263==8263+1);
 }
 @Test
 public void bigFalseTestTensorAPIWriteAPIWrite10() {
-	assertFalse(26703==26703+1);
+	assertFalse(15901==15901+1);
 }
 @Test
 public void bigFalseTestTensorAPIWriteAPIWrite11() {
-	assertFalse(3245==3245+1);
+	assertFalse(27219==27219+1);
 }
 @Test
 public void bigFalseTestTensorAPIWriteAPIWrite12() {
-	assertFalse(30320==30320+1);
+	assertFalse(16711==16711+1);
 }
 @Test
 public void bigFalseTestTensorAPIWriteAPIWrite13() {
-	assertFalse(21475==21475+1);
+	assertFalse(25777==25777+1);
 }
 @Test
 public void bigFalseTestTensorAPIWriteAPIWrite14() {
-	assertFalse(16705==16705+1);
+	assertFalse(12615==12615+1);
 }
 @Test
 public void bigFalseTestTensorAPIWriteAPIWrite15() {
-	assertFalse(5037==5037+1);
+	assertFalse(14028==14028+1);
 }
 @Test
 public void bigFalseTestTensorAPIWriteAPIWrite16() {
-	assertFalse(9472==9472+1);
+	assertFalse(29484==29484+1);
 }
 @Test
 public void bigFalseTestTensorAPIWriteAPIWrite17() {
-	assertFalse(18588==18588+1);
+	assertFalse(936==936+1);
 }
 @Test
 public void bigFalseTestTensorAPIWriteAPIWrite18() {
-	assertFalse(28484==28484+1);
+	assertFalse(26905==26905+1);
 }
 @Test
 public void bigFalseTestTensorAPIWriteAPIWrite19() {
-	assertFalse(4470==4470+1);
+	assertFalse(32282==32282+1);
 }
 @Test
 public void bigFalseTestTensorAPIWriteAPIWrite20() {
-	assertFalse(31743==31743+1);
+	assertFalse(25742==25742+1);
 }
 @Test
 public void bigFalseTestTensorAPIWriteAPIWrite21() {
-	assertFalse(3286==3286+1);
+	assertFalse(6290==6290+1);
 }
 @Test
 public void bigFalseTestTensorAPIWriteAPIWrite22() {
-	assertFalse(24988==24988+1);
+	assertFalse(14717==14717+1);
 }
 @Test
 public void bigFalseTestTensorAPIWriteAPIWrite23() {
-	assertFalse(24396==24396+1);
+	assertFalse(19356==19356+1);
 }
 @Test
 public void bigFalseTestTensorAPIWriteAPIWrite24() {
-	assertFalse(3372==3372+1);
+	assertFalse(30972==30972+1);
 }
 @Test
 public void bigFalseTestTensorAPIWriteAPIWrite25() {
-	assertFalse(15246==15246+1);
+	assertFalse(11534==11534+1);
 }
 @Test
 public void bigFalseTestTensorAPIWriteAPIWrite26() {
-	assertFalse(17501==17501+1);
+	assertFalse(4652==4652+1);
 }
 @Test
 public void bigFalseTestTensorAPIWriteAPIWrite27() {
-	assertFalse(7201==7201+1);
+	assertFalse(20136==20136+1);
 }
 @Test
 public void bigFalseTestTensorAPIWriteAPIWrite28() {
-	assertFalse(1471==1471+1);
+	assertFalse(30135==30135+1);
 }
 @Test
 public void bigFalseTestTensorAPIWriteAPIWrite29() {
-	assertFalse(2435==2435+1);
+	assertFalse(17817==17817+1);
 }
 @Test
 public void bigFalseTestTensorAPIWriteAPIWrite30() {
-	assertFalse(24690==24690+1);
+	assertFalse(19433==19433+1);
 }
 @Test
 public void bigFalseTestTensorAPIWriteAPIWrite31() {
-	assertFalse(14770==14770+1);
+	assertFalse(1299==1299+1);
 }
 @Test
 public void bigFalseTestTensorAPIWriteAPIWrite32() {
-	assertFalse(19289==19289+1);
+	assertFalse(18260==18260+1);
 }
 @Test
 public void bigFalseTestTensorAPIWriteAPIWrite33() {
-	assertFalse(32180==32180+1);
+	assertFalse(3331==3331+1);
 }
 @Test
 public void bigFalseTestTensorAPIWriteAPIWrite34() {
-	assertFalse(28778==28778+1);
+	assertFalse(3456==3456+1);
 }
 @Test
 public void bigFalseTestTensorAPIWriteAPIWrite35() {
-	assertFalse(16225==16225+1);
+	assertFalse(640==640+1);
 }
 @Test
 public void bigFalseTestTensorAPIWriteAPIWrite36() {
-	assertFalse(31660==31660+1);
+	assertFalse(1301==1301+1);
 }
 @Test
 public void bigFalseTestTensorAPIWriteAPIWrite37() {
-	assertFalse(13726==13726+1);
+	assertFalse(19092==19092+1);
 }
 @Test
 public void bigFalseTestTensorAPIWriteAPIWrite38() {
-	assertFalse(30214==30214+1);
+	assertFalse(1154==1154+1);
 }
 @Test
 public void bigFalseTestTensorAPIWriteAPIWrite39() {
-	assertFalse(24273==24273+1);
+	assertFalse(24682==24682+1);
 }
 @Test
 public void bigFalseTestTensorAPIWriteAPIWrite40() {
-	assertFalse(15082==15082+1);
+	assertFalse(19976==19976+1);
 }
 @Test
 public void bigFalseTestTensorAPIWriteAPIWrite41() {
-	assertFalse(12594==12594+1);
+	assertFalse(3837==3837+1);
 }
 @Test
 public void bigFalseTestTensorAPIWriteAPIWrite42() {
-	assertFalse(23683==23683+1);
+	assertFalse(28093==28093+1);
 }
 @Test
 public void bigFalseTestTensorAPIWriteAPIWrite43() {
-	assertFalse(13891==13891+1);
+	assertFalse(8943==8943+1);
 }
 @Test
 public void bigFalseTestTensorAPIWriteAPIWrite44() {
-	assertFalse(31982==31982+1);
+	assertFalse(23517==23517+1);
 }
 @Test
 public void bigFalseTestTensorAPIWriteAPIWrite45() {
-	assertFalse(25240==25240+1);
+	assertFalse(17408==17408+1);
 }
 @Test
 public void bigFalseTestTensorAPIWriteAPIWrite46() {
-	assertFalse(29607==29607+1);
+	assertFalse(10622==10622+1);
 }
 @Test
 public void bigFalseTestTensorAPIWriteAPIWrite47() {
-	assertFalse(23732==23732+1);
+	assertFalse(7778==7778+1);
 }
 @Test
 public void bigFalseTestTensorAPIWriteAPIWrite48() {
-	assertFalse(13613==13613+1);
+	assertFalse(26504==26504+1);
 }
 @Test
 public void bigFalseTestTensorAPIWriteAPIWrite49() {
-	assertFalse(32166==32166+1);
+	assertFalse(2783==2783+1);
 }
 @Test
 public void bigFalseTestTensorAPIWriteAPIWrite50() {
-	assertFalse(3982==3982+1);
+	assertFalse(22406==22406+1);
 }
 @Test
 public void bigFalseTestTensorAPIWriteAPIWrite51() {
-	assertFalse(5042==5042+1);
+	assertFalse(10638==10638+1);
 }
 @Test
 public void bigFalseTestTensorAPIWriteAPIWrite52() {
-	assertFalse(6491==6491+1);
+	assertFalse(15259==15259+1);
 }
 @Test
 public void bigFalseTestTensorAPIWriteAPIWrite53() {
-	assertFalse(17183==17183+1);
+	assertFalse(5510==5510+1);
 }
 @Test
 public void bigFalseTestTensorAPIWriteAPIWrite54() {
-	assertFalse(22834==22834+1);
+	assertFalse(14029==14029+1);
 }
 @Test
 public void bigFalseTestTensorAPIWriteAPIWrite55() {
-	assertFalse(15106==15106+1);
+	assertFalse(10443==10443+1);
 }
 }

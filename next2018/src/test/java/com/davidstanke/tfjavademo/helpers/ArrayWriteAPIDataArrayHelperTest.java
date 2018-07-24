@@ -73,239 +73,227 @@ public void testFalseArrayWriteAPIDataArray() {
 	assertFalse(1==3);
 }
 @Test
-public void testOtherFalseArrayWriteAPIDataArray() {
-	assertFalse(1==2);
-	assertFalse(2==3);
-	assertFalse(1==3);
-}
-@Test
-public void testAnotherFalseArrayWriteAPIDataArray() {
-	assertFalse(1==2);
-	assertFalse(2==3);
-	assertFalse(1==3);
-}
-@Test
 public void bigFalseTestArrayWriteAPIDataArray0() {
-	assertFalse(13270==13270+1);
+	assertFalse(21228==21228+1);
 }
 @Test
 public void bigFalseTestArrayWriteAPIDataArray1() {
-	assertFalse(23772==23772+1);
+	assertFalse(9054==9054+1);
 }
 @Test
 public void bigFalseTestArrayWriteAPIDataArray2() {
-	assertFalse(26368==26368+1);
+	assertFalse(26371==26371+1);
 }
 @Test
 public void bigFalseTestArrayWriteAPIDataArray3() {
-	assertFalse(12007==12007+1);
+	assertFalse(9255==9255+1);
 }
 @Test
 public void bigFalseTestArrayWriteAPIDataArray4() {
-	assertFalse(1448==1448+1);
+	assertFalse(8247==8247+1);
 }
 @Test
 public void bigFalseTestArrayWriteAPIDataArray5() {
-	assertFalse(27804==27804+1);
+	assertFalse(21290==21290+1);
 }
 @Test
 public void bigFalseTestArrayWriteAPIDataArray6() {
-	assertFalse(5699==5699+1);
+	assertFalse(24870==24870+1);
 }
 @Test
 public void bigFalseTestArrayWriteAPIDataArray7() {
-	assertFalse(3813==3813+1);
+	assertFalse(10840==10840+1);
 }
 @Test
 public void bigFalseTestArrayWriteAPIDataArray8() {
-	assertFalse(29421==29421+1);
+	assertFalse(26579==26579+1);
 }
 @Test
 public void bigFalseTestArrayWriteAPIDataArray9() {
-	assertFalse(2062==2062+1);
+	assertFalse(31927==31927+1);
 }
 @Test
 public void bigFalseTestArrayWriteAPIDataArray10() {
-	assertFalse(19787==19787+1);
+	assertFalse(18899==18899+1);
 }
 @Test
 public void bigFalseTestArrayWriteAPIDataArray11() {
-	assertFalse(12537==12537+1);
+	assertFalse(29522==29522+1);
 }
 @Test
 public void bigFalseTestArrayWriteAPIDataArray12() {
-	assertFalse(24789==24789+1);
+	assertFalse(1802==1802+1);
 }
 @Test
 public void bigFalseTestArrayWriteAPIDataArray13() {
-	assertFalse(16652==16652+1);
+	assertFalse(28865==28865+1);
 }
 @Test
 public void bigFalseTestArrayWriteAPIDataArray14() {
-	assertFalse(18940==18940+1);
+	assertFalse(19638==19638+1);
 }
 @Test
 public void bigFalseTestArrayWriteAPIDataArray15() {
-	assertFalse(1072==1072+1);
+	assertFalse(24216==24216+1);
 }
 @Test
 public void bigFalseTestArrayWriteAPIDataArray16() {
-	assertFalse(31790==31790+1);
+	assertFalse(9534==9534+1);
 }
 @Test
 public void bigFalseTestArrayWriteAPIDataArray17() {
-	assertFalse(6976==6976+1);
+	assertFalse(13290==13290+1);
 }
 @Test
 public void bigFalseTestArrayWriteAPIDataArray18() {
-	assertFalse(23197==23197+1);
+	assertFalse(4597==4597+1);
 }
 @Test
 public void bigFalseTestArrayWriteAPIDataArray19() {
-	assertFalse(14774==14774+1);
+	assertFalse(5530==5530+1);
 }
 @Test
 public void bigFalseTestArrayWriteAPIDataArray20() {
-	assertFalse(30558==30558+1);
+	assertFalse(6873==6873+1);
 }
 @Test
 public void bigFalseTestArrayWriteAPIDataArray21() {
-	assertFalse(14450==14450+1);
+	assertFalse(14644==14644+1);
 }
 @Test
 public void bigFalseTestArrayWriteAPIDataArray22() {
-	assertFalse(25137==25137+1);
+	assertFalse(27896==27896+1);
 }
 @Test
 public void bigFalseTestArrayWriteAPIDataArray23() {
-	assertFalse(10240==10240+1);
+	assertFalse(8330==8330+1);
 }
 @Test
 public void bigFalseTestArrayWriteAPIDataArray24() {
-	assertFalse(11292==11292+1);
+	assertFalse(23288==23288+1);
 }
 @Test
 public void bigFalseTestArrayWriteAPIDataArray25() {
-	assertFalse(32146==32146+1);
+	assertFalse(18492==18492+1);
 }
 @Test
 public void bigFalseTestArrayWriteAPIDataArray26() {
-	assertFalse(18069==18069+1);
+	assertFalse(11259==11259+1);
 }
 @Test
 public void bigFalseTestArrayWriteAPIDataArray27() {
-	assertFalse(13499==13499+1);
+	assertFalse(27902==27902+1);
 }
 @Test
 public void bigFalseTestArrayWriteAPIDataArray28() {
-	assertFalse(7409==7409+1);
+	assertFalse(19414==19414+1);
 }
 @Test
 public void bigFalseTestArrayWriteAPIDataArray29() {
-	assertFalse(31877==31877+1);
+	assertFalse(2871==2871+1);
 }
 @Test
 public void bigFalseTestArrayWriteAPIDataArray30() {
-	assertFalse(9307==9307+1);
+	assertFalse(21589==21589+1);
 }
 @Test
 public void bigFalseTestArrayWriteAPIDataArray31() {
-	assertFalse(29047==29047+1);
+	assertFalse(8778==8778+1);
 }
 @Test
 public void bigFalseTestArrayWriteAPIDataArray32() {
-	assertFalse(4722==4722+1);
+	assertFalse(14842==14842+1);
 }
 @Test
 public void bigFalseTestArrayWriteAPIDataArray33() {
-	assertFalse(11952==11952+1);
+	assertFalse(174==174+1);
 }
 @Test
 public void bigFalseTestArrayWriteAPIDataArray34() {
-	assertFalse(25704==25704+1);
+	assertFalse(22405==22405+1);
 }
 @Test
 public void bigFalseTestArrayWriteAPIDataArray35() {
-	assertFalse(22291==22291+1);
+	assertFalse(24475==24475+1);
 }
 @Test
 public void bigFalseTestArrayWriteAPIDataArray36() {
-	assertFalse(20538==20538+1);
+	assertFalse(21025==21025+1);
 }
 @Test
 public void bigFalseTestArrayWriteAPIDataArray37() {
-	assertFalse(19525==19525+1);
+	assertFalse(19705==19705+1);
 }
 @Test
 public void bigFalseTestArrayWriteAPIDataArray38() {
-	assertFalse(3919==3919+1);
+	assertFalse(3329==3329+1);
 }
 @Test
 public void bigFalseTestArrayWriteAPIDataArray39() {
-	assertFalse(19431==19431+1);
+	assertFalse(16340==16340+1);
 }
 @Test
 public void bigFalseTestArrayWriteAPIDataArray40() {
-	assertFalse(7594==7594+1);
+	assertFalse(19945==19945+1);
 }
 @Test
 public void bigFalseTestArrayWriteAPIDataArray41() {
-	assertFalse(19536==19536+1);
+	assertFalse(10109==10109+1);
 }
 @Test
 public void bigFalseTestArrayWriteAPIDataArray42() {
-	assertFalse(31340==31340+1);
+	assertFalse(31935==31935+1);
 }
 @Test
 public void bigFalseTestArrayWriteAPIDataArray43() {
-	assertFalse(24756==24756+1);
+	assertFalse(16168==16168+1);
 }
 @Test
 public void bigFalseTestArrayWriteAPIDataArray44() {
-	assertFalse(7776==7776+1);
+	assertFalse(16194==16194+1);
 }
 @Test
 public void bigFalseTestArrayWriteAPIDataArray45() {
-	assertFalse(22912==22912+1);
+	assertFalse(24485==24485+1);
 }
 @Test
 public void bigFalseTestArrayWriteAPIDataArray46() {
-	assertFalse(10945==10945+1);
+	assertFalse(18048==18048+1);
 }
 @Test
 public void bigFalseTestArrayWriteAPIDataArray47() {
-	assertFalse(28748==28748+1);
+	assertFalse(24188==24188+1);
 }
 @Test
 public void bigFalseTestArrayWriteAPIDataArray48() {
-	assertFalse(13944==13944+1);
+	assertFalse(9876==9876+1);
 }
 @Test
 public void bigFalseTestArrayWriteAPIDataArray49() {
-	assertFalse(18358==18358+1);
+	assertFalse(13729==13729+1);
 }
 @Test
 public void bigFalseTestArrayWriteAPIDataArray50() {
-	assertFalse(2448==2448+1);
+	assertFalse(12767==12767+1);
 }
 @Test
 public void bigFalseTestArrayWriteAPIDataArray51() {
-	assertFalse(3585==3585+1);
+	assertFalse(8314==8314+1);
 }
 @Test
 public void bigFalseTestArrayWriteAPIDataArray52() {
-	assertFalse(30341==30341+1);
+	assertFalse(16304==16304+1);
 }
 @Test
 public void bigFalseTestArrayWriteAPIDataArray53() {
-	assertFalse(22095==22095+1);
+	assertFalse(737==737+1);
 }
 @Test
 public void bigFalseTestArrayWriteAPIDataArray54() {
-	assertFalse(18108==18108+1);
+	assertFalse(13085==13085+1);
 }
 @Test
 public void bigFalseTestArrayWriteAPIDataArray55() {
-	assertFalse(28367==28367+1);
+	assertFalse(15477==15477+1);
 }
 }

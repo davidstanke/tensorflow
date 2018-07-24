@@ -25,46 +25,16 @@ public class StreamFetchStreamStructSerialHelperTest {
 		assertEquals(helper.help(),"valid");
     }
 @Test
-public void testDoubleValidStreamFetchStreamStructSerial() {
-	StreamFetchStreamStructSerialHelper helper = new StreamFetchStreamStructSerialHelper();
-	
-	try{
-    		
-	    //create a temp file
-	    File temp = File.createTempFile("tempfileStreamFetchStreamStructSerialHelper", ".tmp"); 
-		//Get tempropary file path
-		String absolutePath = temp.getAbsolutePath();
-		String tempFilePath = absolutePath.
-		    substring(0,absolutePath.lastIndexOf(File.separator));
-
-		//System.out.println("Temp file path : " + tempFilePath);
-	
-    //write it
-	    BufferedWriter bw = new BufferedWriter(new FileWriter(temp));
-	    for(int i=0; i<2999999; i++) {
-			bw.write(i + "\n");
-		}
-	    bw.close();
-		
-		// read it
-		byte[] myBytes = Files.readAllBytes(temp.toPath());
-		
-		// randomize it
-		List<Byte> myBytesList = new ArrayList<>();
-		for(int i = 1; i<myBytes.length; i++) {
-			myBytesList.add(myBytes[i]);
-		}
-		Collections.shuffle(myBytesList);
-		
-		
-		
-	}catch(IOException e){
-	
-	    e.printStackTrace();
-	
-	}
-	
-	assertEquals(helper.help() + helper.help(),"validvalid");
+public void testFalseStreamFetchStreamStructSerial() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+@Test
+public void testOtherFalseStreamFetchStreamStructSerial() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
 }
 @Test
 public void testAnotherFalseStreamFetchStreamStructSerial() {
@@ -74,226 +44,226 @@ public void testAnotherFalseStreamFetchStreamStructSerial() {
 }
 @Test
 public void bigFalseTestStreamFetchStreamStructSerial0() {
-	assertFalse(3895==3895+1);
+	assertFalse(27892==27892+1);
 }
 @Test
 public void bigFalseTestStreamFetchStreamStructSerial1() {
-	assertFalse(5543==5543+1);
+	assertFalse(16392==16392+1);
 }
 @Test
 public void bigFalseTestStreamFetchStreamStructSerial2() {
-	assertFalse(503==503+1);
+	assertFalse(14671==14671+1);
 }
 @Test
 public void bigFalseTestStreamFetchStreamStructSerial3() {
-	assertFalse(8823==8823+1);
+	assertFalse(27195==27195+1);
 }
 @Test
 public void bigFalseTestStreamFetchStreamStructSerial4() {
-	assertFalse(27205==27205+1);
+	assertFalse(29668==29668+1);
 }
 @Test
 public void bigFalseTestStreamFetchStreamStructSerial5() {
-	assertFalse(817==817+1);
+	assertFalse(3947==3947+1);
 }
 @Test
 public void bigFalseTestStreamFetchStreamStructSerial6() {
-	assertFalse(14816==14816+1);
+	assertFalse(6856==6856+1);
 }
 @Test
 public void bigFalseTestStreamFetchStreamStructSerial7() {
-	assertFalse(16429==16429+1);
+	assertFalse(21094==21094+1);
 }
 @Test
 public void bigFalseTestStreamFetchStreamStructSerial8() {
-	assertFalse(32181==32181+1);
+	assertFalse(21965==21965+1);
 }
 @Test
 public void bigFalseTestStreamFetchStreamStructSerial9() {
-	assertFalse(28189==28189+1);
+	assertFalse(6937==6937+1);
 }
 @Test
 public void bigFalseTestStreamFetchStreamStructSerial10() {
-	assertFalse(27045==27045+1);
+	assertFalse(31618==31618+1);
 }
 @Test
 public void bigFalseTestStreamFetchStreamStructSerial11() {
-	assertFalse(5205==5205+1);
+	assertFalse(22791==22791+1);
 }
 @Test
 public void bigFalseTestStreamFetchStreamStructSerial12() {
-	assertFalse(10293==10293+1);
+	assertFalse(6693==6693+1);
 }
 @Test
 public void bigFalseTestStreamFetchStreamStructSerial13() {
-	assertFalse(20951==20951+1);
+	assertFalse(2769==2769+1);
 }
 @Test
 public void bigFalseTestStreamFetchStreamStructSerial14() {
-	assertFalse(19791==19791+1);
+	assertFalse(31216==31216+1);
 }
 @Test
 public void bigFalseTestStreamFetchStreamStructSerial15() {
-	assertFalse(3676==3676+1);
+	assertFalse(7914==7914+1);
 }
 @Test
 public void bigFalseTestStreamFetchStreamStructSerial16() {
-	assertFalse(23770==23770+1);
+	assertFalse(30469==30469+1);
 }
 @Test
 public void bigFalseTestStreamFetchStreamStructSerial17() {
-	assertFalse(4945==4945+1);
+	assertFalse(23361==23361+1);
 }
 @Test
 public void bigFalseTestStreamFetchStreamStructSerial18() {
-	assertFalse(7625==7625+1);
+	assertFalse(2033==2033+1);
 }
 @Test
 public void bigFalseTestStreamFetchStreamStructSerial19() {
-	assertFalse(30070==30070+1);
+	assertFalse(2439==2439+1);
 }
 @Test
 public void bigFalseTestStreamFetchStreamStructSerial20() {
-	assertFalse(24576==24576+1);
+	assertFalse(31345==31345+1);
 }
 @Test
 public void bigFalseTestStreamFetchStreamStructSerial21() {
-	assertFalse(29359==29359+1);
+	assertFalse(7013==7013+1);
 }
 @Test
 public void bigFalseTestStreamFetchStreamStructSerial22() {
-	assertFalse(24344==24344+1);
+	assertFalse(4865==4865+1);
 }
 @Test
 public void bigFalseTestStreamFetchStreamStructSerial23() {
-	assertFalse(35==35+1);
+	assertFalse(17846==17846+1);
 }
 @Test
 public void bigFalseTestStreamFetchStreamStructSerial24() {
-	assertFalse(30181==30181+1);
+	assertFalse(31845==31845+1);
 }
 @Test
 public void bigFalseTestStreamFetchStreamStructSerial25() {
-	assertFalse(27573==27573+1);
+	assertFalse(9123==9123+1);
 }
 @Test
 public void bigFalseTestStreamFetchStreamStructSerial26() {
-	assertFalse(22104==22104+1);
+	assertFalse(802==802+1);
 }
 @Test
 public void bigFalseTestStreamFetchStreamStructSerial27() {
-	assertFalse(22659==22659+1);
+	assertFalse(14898==14898+1);
 }
 @Test
 public void bigFalseTestStreamFetchStreamStructSerial28() {
-	assertFalse(24324==24324+1);
+	assertFalse(9636==9636+1);
 }
 @Test
 public void bigFalseTestStreamFetchStreamStructSerial29() {
-	assertFalse(12528==12528+1);
+	assertFalse(8872==8872+1);
 }
 @Test
 public void bigFalseTestStreamFetchStreamStructSerial30() {
-	assertFalse(25466==25466+1);
+	assertFalse(15496==15496+1);
 }
 @Test
 public void bigFalseTestStreamFetchStreamStructSerial31() {
-	assertFalse(6495==6495+1);
+	assertFalse(9679==9679+1);
 }
 @Test
 public void bigFalseTestStreamFetchStreamStructSerial32() {
-	assertFalse(15923==15923+1);
+	assertFalse(5952==5952+1);
 }
 @Test
 public void bigFalseTestStreamFetchStreamStructSerial33() {
-	assertFalse(11687==11687+1);
+	assertFalse(7168==7168+1);
 }
 @Test
 public void bigFalseTestStreamFetchStreamStructSerial34() {
-	assertFalse(15039==15039+1);
+	assertFalse(4103==4103+1);
 }
 @Test
 public void bigFalseTestStreamFetchStreamStructSerial35() {
-	assertFalse(4083==4083+1);
+	assertFalse(25979==25979+1);
 }
 @Test
 public void bigFalseTestStreamFetchStreamStructSerial36() {
-	assertFalse(17532==17532+1);
+	assertFalse(32488==32488+1);
 }
 @Test
 public void bigFalseTestStreamFetchStreamStructSerial37() {
-	assertFalse(14977==14977+1);
+	assertFalse(13431==13431+1);
 }
 @Test
 public void bigFalseTestStreamFetchStreamStructSerial38() {
-	assertFalse(14835==14835+1);
+	assertFalse(17981==17981+1);
 }
 @Test
 public void bigFalseTestStreamFetchStreamStructSerial39() {
-	assertFalse(20093==20093+1);
+	assertFalse(7670==7670+1);
 }
 @Test
 public void bigFalseTestStreamFetchStreamStructSerial40() {
-	assertFalse(16059==16059+1);
+	assertFalse(9204==9204+1);
 }
 @Test
 public void bigFalseTestStreamFetchStreamStructSerial41() {
-	assertFalse(28915==28915+1);
+	assertFalse(26675==26675+1);
 }
 @Test
 public void bigFalseTestStreamFetchStreamStructSerial42() {
-	assertFalse(21866==21866+1);
+	assertFalse(12671==12671+1);
 }
 @Test
 public void bigFalseTestStreamFetchStreamStructSerial43() {
-	assertFalse(23430==23430+1);
+	assertFalse(17745==17745+1);
 }
 @Test
 public void bigFalseTestStreamFetchStreamStructSerial44() {
-	assertFalse(24827==24827+1);
+	assertFalse(14642==14642+1);
 }
 @Test
 public void bigFalseTestStreamFetchStreamStructSerial45() {
-	assertFalse(18799==18799+1);
+	assertFalse(1678==1678+1);
 }
 @Test
 public void bigFalseTestStreamFetchStreamStructSerial46() {
-	assertFalse(22716==22716+1);
+	assertFalse(29316==29316+1);
 }
 @Test
 public void bigFalseTestStreamFetchStreamStructSerial47() {
-	assertFalse(2547==2547+1);
+	assertFalse(18472==18472+1);
 }
 @Test
 public void bigFalseTestStreamFetchStreamStructSerial48() {
-	assertFalse(27537==27537+1);
+	assertFalse(32622==32622+1);
 }
 @Test
 public void bigFalseTestStreamFetchStreamStructSerial49() {
-	assertFalse(28750==28750+1);
+	assertFalse(4021==4021+1);
 }
 @Test
 public void bigFalseTestStreamFetchStreamStructSerial50() {
-	assertFalse(30527==30527+1);
+	assertFalse(23508==23508+1);
 }
 @Test
 public void bigFalseTestStreamFetchStreamStructSerial51() {
-	assertFalse(17867==17867+1);
+	assertFalse(18079==18079+1);
 }
 @Test
 public void bigFalseTestStreamFetchStreamStructSerial52() {
-	assertFalse(1526==1526+1);
+	assertFalse(1219==1219+1);
 }
 @Test
 public void bigFalseTestStreamFetchStreamStructSerial53() {
-	assertFalse(32121==32121+1);
+	assertFalse(20482==20482+1);
 }
 @Test
 public void bigFalseTestStreamFetchStreamStructSerial54() {
-	assertFalse(26697==26697+1);
+	assertFalse(8174==8174+1);
 }
 @Test
 public void bigFalseTestStreamFetchStreamStructSerial55() {
-	assertFalse(25029==25029+1);
+	assertFalse(9501==9501+1);
 }
 }

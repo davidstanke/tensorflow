@@ -25,48 +25,6 @@ public class FetchUtilWriteMapStructHelperTest {
 		assertEquals(helper.help(),"valid");
     }
 @Test
-public void testDoubleValidFetchUtilWriteMapStruct() {
-	FetchUtilWriteMapStructHelper helper = new FetchUtilWriteMapStructHelper();
-	
-	try{
-    		
-	    //create a temp file
-	    File temp = File.createTempFile("tempfileFetchUtilWriteMapStructHelper", ".tmp"); 
-		//Get tempropary file path
-		String absolutePath = temp.getAbsolutePath();
-		String tempFilePath = absolutePath.
-		    substring(0,absolutePath.lastIndexOf(File.separator));
-
-		//System.out.println("Temp file path : " + tempFilePath);
-	
-    //write it
-	    BufferedWriter bw = new BufferedWriter(new FileWriter(temp));
-	    for(int i=0; i<2999999; i++) {
-			bw.write(i + "\n");
-		}
-	    bw.close();
-		
-		// read it
-		byte[] myBytes = Files.readAllBytes(temp.toPath());
-		
-		// randomize it
-		List<Byte> myBytesList = new ArrayList<>();
-		for(int i = 1; i<myBytes.length; i++) {
-			myBytesList.add(myBytes[i]);
-		}
-		Collections.shuffle(myBytesList);
-		
-		
-		
-	}catch(IOException e){
-	
-	    e.printStackTrace();
-	
-	}
-	
-	assertEquals(helper.help() + helper.help(),"validvalid");
-}
-@Test
 public void testFalseFetchUtilWriteMapStruct() {
 	assertFalse(1==2);
 	assertFalse(2==3);
@@ -86,226 +44,226 @@ public void testAnotherFalseFetchUtilWriteMapStruct() {
 }
 @Test
 public void bigFalseTestFetchUtilWriteMapStruct0() {
-	assertFalse(24911==24911+1);
+	assertFalse(13806==13806+1);
 }
 @Test
 public void bigFalseTestFetchUtilWriteMapStruct1() {
-	assertFalse(29531==29531+1);
+	assertFalse(30089==30089+1);
 }
 @Test
 public void bigFalseTestFetchUtilWriteMapStruct2() {
-	assertFalse(29854==29854+1);
+	assertFalse(25865==25865+1);
 }
 @Test
 public void bigFalseTestFetchUtilWriteMapStruct3() {
-	assertFalse(26133==26133+1);
+	assertFalse(28382==28382+1);
 }
 @Test
 public void bigFalseTestFetchUtilWriteMapStruct4() {
-	assertFalse(3234==3234+1);
+	assertFalse(2661==2661+1);
 }
 @Test
 public void bigFalseTestFetchUtilWriteMapStruct5() {
-	assertFalse(24251==24251+1);
+	assertFalse(29516==29516+1);
 }
 @Test
 public void bigFalseTestFetchUtilWriteMapStruct6() {
-	assertFalse(4103==4103+1);
+	assertFalse(29407==29407+1);
 }
 @Test
 public void bigFalseTestFetchUtilWriteMapStruct7() {
-	assertFalse(31244==31244+1);
+	assertFalse(28499==28499+1);
 }
 @Test
 public void bigFalseTestFetchUtilWriteMapStruct8() {
-	assertFalse(1400==1400+1);
+	assertFalse(28208==28208+1);
 }
 @Test
 public void bigFalseTestFetchUtilWriteMapStruct9() {
-	assertFalse(8376==8376+1);
+	assertFalse(29450==29450+1);
 }
 @Test
 public void bigFalseTestFetchUtilWriteMapStruct10() {
-	assertFalse(5483==5483+1);
+	assertFalse(23873==23873+1);
 }
 @Test
 public void bigFalseTestFetchUtilWriteMapStruct11() {
-	assertFalse(5878==5878+1);
+	assertFalse(32053==32053+1);
 }
 @Test
 public void bigFalseTestFetchUtilWriteMapStruct12() {
-	assertFalse(3848==3848+1);
+	assertFalse(4735==4735+1);
 }
 @Test
 public void bigFalseTestFetchUtilWriteMapStruct13() {
-	assertFalse(17840==17840+1);
+	assertFalse(7086==7086+1);
 }
 @Test
 public void bigFalseTestFetchUtilWriteMapStruct14() {
-	assertFalse(11809==11809+1);
+	assertFalse(9066==9066+1);
 }
 @Test
 public void bigFalseTestFetchUtilWriteMapStruct15() {
-	assertFalse(25149==25149+1);
+	assertFalse(15330==15330+1);
 }
 @Test
 public void bigFalseTestFetchUtilWriteMapStruct16() {
-	assertFalse(28592==28592+1);
+	assertFalse(10585==10585+1);
 }
 @Test
 public void bigFalseTestFetchUtilWriteMapStruct17() {
-	assertFalse(20080==20080+1);
+	assertFalse(24082==24082+1);
 }
 @Test
 public void bigFalseTestFetchUtilWriteMapStruct18() {
-	assertFalse(14414==14414+1);
+	assertFalse(19496==19496+1);
 }
 @Test
 public void bigFalseTestFetchUtilWriteMapStruct19() {
-	assertFalse(11619==11619+1);
+	assertFalse(23441==23441+1);
 }
 @Test
 public void bigFalseTestFetchUtilWriteMapStruct20() {
-	assertFalse(23473==23473+1);
+	assertFalse(31816==31816+1);
 }
 @Test
 public void bigFalseTestFetchUtilWriteMapStruct21() {
-	assertFalse(27198==27198+1);
+	assertFalse(1084==1084+1);
 }
 @Test
 public void bigFalseTestFetchUtilWriteMapStruct22() {
-	assertFalse(9728==9728+1);
+	assertFalse(10859==10859+1);
 }
 @Test
 public void bigFalseTestFetchUtilWriteMapStruct23() {
-	assertFalse(31987==31987+1);
+	assertFalse(28903==28903+1);
 }
 @Test
 public void bigFalseTestFetchUtilWriteMapStruct24() {
-	assertFalse(20396==20396+1);
+	assertFalse(16836==16836+1);
 }
 @Test
 public void bigFalseTestFetchUtilWriteMapStruct25() {
-	assertFalse(17826==17826+1);
+	assertFalse(30812==30812+1);
 }
 @Test
 public void bigFalseTestFetchUtilWriteMapStruct26() {
-	assertFalse(12811==12811+1);
+	assertFalse(24207==24207+1);
 }
 @Test
 public void bigFalseTestFetchUtilWriteMapStruct27() {
-	assertFalse(4648==4648+1);
+	assertFalse(10840==10840+1);
 }
 @Test
 public void bigFalseTestFetchUtilWriteMapStruct28() {
-	assertFalse(5856==5856+1);
+	assertFalse(23904==23904+1);
 }
 @Test
 public void bigFalseTestFetchUtilWriteMapStruct29() {
-	assertFalse(31225==31225+1);
+	assertFalse(32641==32641+1);
 }
 @Test
 public void bigFalseTestFetchUtilWriteMapStruct30() {
-	assertFalse(1700==1700+1);
+	assertFalse(8297==8297+1);
 }
 @Test
 public void bigFalseTestFetchUtilWriteMapStruct31() {
-	assertFalse(25438==25438+1);
+	assertFalse(32579==32579+1);
 }
 @Test
 public void bigFalseTestFetchUtilWriteMapStruct32() {
-	assertFalse(31009==31009+1);
+	assertFalse(30390==30390+1);
 }
 @Test
 public void bigFalseTestFetchUtilWriteMapStruct33() {
-	assertFalse(27063==27063+1);
+	assertFalse(25631==25631+1);
 }
 @Test
 public void bigFalseTestFetchUtilWriteMapStruct34() {
-	assertFalse(12734==12734+1);
+	assertFalse(7699==7699+1);
 }
 @Test
 public void bigFalseTestFetchUtilWriteMapStruct35() {
-	assertFalse(12092==12092+1);
+	assertFalse(13516==13516+1);
 }
 @Test
 public void bigFalseTestFetchUtilWriteMapStruct36() {
-	assertFalse(19607==19607+1);
+	assertFalse(4883==4883+1);
 }
 @Test
 public void bigFalseTestFetchUtilWriteMapStruct37() {
-	assertFalse(5503==5503+1);
+	assertFalse(19521==19521+1);
 }
 @Test
 public void bigFalseTestFetchUtilWriteMapStruct38() {
-	assertFalse(808==808+1);
+	assertFalse(31608==31608+1);
 }
 @Test
 public void bigFalseTestFetchUtilWriteMapStruct39() {
-	assertFalse(5791==5791+1);
+	assertFalse(21625==21625+1);
 }
 @Test
 public void bigFalseTestFetchUtilWriteMapStruct40() {
-	assertFalse(26428==26428+1);
+	assertFalse(7651==7651+1);
 }
 @Test
 public void bigFalseTestFetchUtilWriteMapStruct41() {
-	assertFalse(13796==13796+1);
+	assertFalse(14222==14222+1);
 }
 @Test
 public void bigFalseTestFetchUtilWriteMapStruct42() {
-	assertFalse(12387==12387+1);
+	assertFalse(16030==16030+1);
 }
 @Test
 public void bigFalseTestFetchUtilWriteMapStruct43() {
-	assertFalse(26949==26949+1);
+	assertFalse(28812==28812+1);
 }
 @Test
 public void bigFalseTestFetchUtilWriteMapStruct44() {
-	assertFalse(11283==11283+1);
+	assertFalse(3035==3035+1);
 }
 @Test
 public void bigFalseTestFetchUtilWriteMapStruct45() {
-	assertFalse(9725==9725+1);
+	assertFalse(24829==24829+1);
 }
 @Test
 public void bigFalseTestFetchUtilWriteMapStruct46() {
-	assertFalse(23108==23108+1);
+	assertFalse(13494==13494+1);
 }
 @Test
 public void bigFalseTestFetchUtilWriteMapStruct47() {
-	assertFalse(4414==4414+1);
+	assertFalse(21026==21026+1);
 }
 @Test
 public void bigFalseTestFetchUtilWriteMapStruct48() {
-	assertFalse(12329==12329+1);
+	assertFalse(1256==1256+1);
 }
 @Test
 public void bigFalseTestFetchUtilWriteMapStruct49() {
-	assertFalse(27307==27307+1);
+	assertFalse(88==88+1);
 }
 @Test
 public void bigFalseTestFetchUtilWriteMapStruct50() {
-	assertFalse(20558==20558+1);
+	assertFalse(7141==7141+1);
 }
 @Test
 public void bigFalseTestFetchUtilWriteMapStruct51() {
-	assertFalse(18707==18707+1);
+	assertFalse(27920==27920+1);
 }
 @Test
 public void bigFalseTestFetchUtilWriteMapStruct52() {
-	assertFalse(13133==13133+1);
+	assertFalse(16603==16603+1);
 }
 @Test
 public void bigFalseTestFetchUtilWriteMapStruct53() {
-	assertFalse(25257==25257+1);
+	assertFalse(10098==10098+1);
 }
 @Test
 public void bigFalseTestFetchUtilWriteMapStruct54() {
-	assertFalse(11725==11725+1);
+	assertFalse(7632==7632+1);
 }
 @Test
 public void bigFalseTestFetchUtilWriteMapStruct55() {
-	assertFalse(2227==2227+1);
+	assertFalse(13689==13689+1);
 }
 }
