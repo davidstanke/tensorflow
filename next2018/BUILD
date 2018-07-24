@@ -6,7 +6,7 @@ java_binary(
     srcs=glob(["src/main/java/com/davidstanke/**/*.java"]),
     main_class = "com.davidstanke.tfjavademo.TFJavaDemo",
     deps = ["//tensorflow/java:tensorflow"],
-    data = [":images"]
+    data = [":images",":model"]
 )
 
 filegroup(
@@ -14,6 +14,11 @@ filegroup(
 	srcs = glob([
 		"img/*",
 	]),
+)
+
+filegroup(
+	name = "model",
+	srcs=glob(["model/*"]),
 )
 
 java_library(

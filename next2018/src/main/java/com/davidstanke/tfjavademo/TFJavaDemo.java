@@ -12,40 +12,38 @@ import java.io.*;
 
 public class TFJavaDemo {
 	
-	final static int ASCII_WIDTH = 60;
+	final static int ASCII_WIDTH = 42;
 
 	public static void main(String[] args) throws IOException {
 
+		// create an instance of the Java wrapper class around TF 
+		LabelImage li = new LabelImage();		
+
 		Scanner keyboard = new Scanner(System.in);
-	
-		String filepath = "";
-	
-		if(args.length == 1) {
-			filepath = args[0];
-		} else {
-			Greeter greeter = new Greeter();
-			System.out.println(greeter.getGreeting());
-			//System.out.println("Welcome to Java Image Labeller!");
-			System.out.println("Enter the path to an image you'd like to label...");
-			filepath = keyboard.next();
-		}
+		Greeter greeter = new Greeter();
+		System.out.println(greeter.getGreeting());
+		
+		System.out.println("Which image would you like to evaluate?");
+		System.out.print("Type a number between 1 and 8: ");
+		int numImg = keyboard.nextInt();
 		
 		System.out.println(System.getProperty("user.dir"));		
 
 		System.out.println("Great, let's see what it looks like:");
 		
+		String filepath = "next2018/img/" + numImg + ".jpg";
+		
+		// pass command-line args to LabelImage class
+		String[] labelArgs = {"next2018/model",filepath};
+		
 		System.out.print(getAscii(filepath));
 		System.out.println();
-		System.out.println("Okay, now let's see what TensorFlow thinks it is...");
-
-		// create an instance of the Java wrapper class around TF 
-
-		LabelImage li = new LabelImage();		
-
-		// pass command-line args to LabelImage class
-		String[] labelArgs = {"./model",filepath};
+		System.out.println("Press Enter to see what TensorFlow thinks it is...");
 		
-		li.main(labelArgs);
+		try{System.in.read();}
+		catch(Exception e){}
+		
+		System.out.println(li.getLabels(labelArgs));
 
 
 	}

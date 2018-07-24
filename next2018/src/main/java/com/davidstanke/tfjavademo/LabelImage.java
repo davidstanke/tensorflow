@@ -54,22 +54,25 @@ public class LabelImage {
       printUsage(System.err);
       System.exit(1);
     }
-    String modelDir = args[0];
-    String imageFile = args[1];
+    System.out.println(getLabels(args));
+  }
+  
+  public static String getLabels(String[] args) {
+      String modelDir = args[0];
+      String imageFile = args[1];
 
-    byte[] graphDef = readAllBytesOrExit(Paths.get(modelDir, "tensorflow_inception_graph.pb"));
-    List<String> labels =
-        readAllLinesOrExit(Paths.get(modelDir, "imagenet_comp_graph_label_strings.txt"));
-    byte[] imageBytes = readAllBytesOrExit(Paths.get(imageFile));
+      byte[] graphDef = readAllBytesOrExit(Paths.get(modelDir, "tensorflow_inception_graph.pb"));
+      List<String> labels =
+          readAllLinesOrExit(Paths.get(modelDir, "imagenet_comp_graph_label_strings.txt"));
+      byte[] imageBytes = readAllBytesOrExit(Paths.get(imageFile));
 
-    try (Tensor<Float> image = constructAndExecuteGraphToNormalizeImage(imageBytes)) {
-      float[] labelProbabilities = executeInceptionGraph(graphDef, image);
-      int bestLabelIdx = maxIndex(labelProbabilities);
-      System.out.println(
-          String.format("BEST MATCH: %s (%.2f%% likely)",
-              labels.get(bestLabelIdx),
-              labelProbabilities[bestLabelIdx] * 100f));
-    }
+      try (Tensor<Float> image = constructAndExecuteGraphToNormalizeImage(imageBytes)) {
+        float[] labelProbabilities = executeInceptionGraph(graphDef, image);
+        int bestLabelIdx = maxIndex(labelProbabilities);
+        return String.format("BEST MATCH: %s (%.2f%% likely)",
+                labels.get(bestLabelIdx),
+                labelProbabilities[bestLabelIdx] * 100f);
+      }
   }
 
   private static Tensor<Float> constructAndExecuteGraphToNormalizeImage(byte[] imageBytes) {
