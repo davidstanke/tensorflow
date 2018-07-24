@@ -14,6 +14,6 @@ public class GreeterTest {
     @Test
     public void testGreeter() {
 	Greeter testgreeter = new Greeter();
-	assertEquals("Hello there! Welcome to the Java Image Labeller!",testgreeter.getGreeting());
+	assertEquals("Hello world! Welcome to the Java Image Labeller!",testgreeter.getGreeting());
     }
 }

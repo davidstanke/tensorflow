@@ -18,13 +18,16 @@ public class TFJavaDemo {
 
 		// create an instance of the Java wrapper class around TF 
 		LabelImage li = new LabelImage();		
+		
+		System.out.println();
+		System.out.println();
 
 		Scanner keyboard = new Scanner(System.in);
 		Greeter greeter = new Greeter();
 		System.out.println(greeter.getGreeting());
 		
 		System.out.println("Which image would you like to evaluate?");
-		System.out.print("Type a number between 1 and 8: ");
+		System.out.print("Type a number from 1 to 6: ");
 		int numImg = keyboard.nextInt();
 		
 		//System.out.println(System.getProperty("user.dir"));		
