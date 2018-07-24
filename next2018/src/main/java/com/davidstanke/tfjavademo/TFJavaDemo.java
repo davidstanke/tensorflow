@@ -9,17 +9,12 @@ import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.*;
-import org.apache.commons.lang3.*;
 
 public class TFJavaDemo {
 	
 	final static int ASCII_WIDTH = 60;
 
 	public static void main(String[] args) throws IOException {
-	
-		int[] arr = null;
-	
-		System.out.println("apache says... " + ArrayUtils.toString(arr));	
 
 		Scanner keyboard = new Scanner(System.in);
 	
