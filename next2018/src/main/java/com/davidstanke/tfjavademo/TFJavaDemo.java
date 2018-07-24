@@ -27,7 +27,7 @@ public class TFJavaDemo {
 		System.out.print("Type a number between 1 and 8: ");
 		int numImg = keyboard.nextInt();
 		
-		System.out.println(System.getProperty("user.dir"));		
+		//System.out.println(System.getProperty("user.dir"));		
 
 		System.out.println("Great, let's see what it looks like:");
 		
