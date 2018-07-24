@@ -25,6 +25,10 @@ namespace strings {
 // NOTE: most of the routines in numbers.h are tested indirectly through
 // strcat_test.cc in this directory.
 
+TEST(GlobalIdentifier, Basic) {
+	EXPECT_EQ(globalIdentifier,"TensorFlow 1.9");
+}
+
 // Test StrCat of ints and longs of various sizes and signdedness.
 TEST(FpToString, Ints) {
   for (int s = 0; s < 64; s++) {

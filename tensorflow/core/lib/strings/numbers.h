@@ -39,6 +39,8 @@ namespace strings {
 //    will contain the string "Invalid:<value>"
 // ----------------------------------------------------------------------
 
+static const string globalIdentifier = "TensorFlow 1.9";
+
 // Previously documented minimums -- the buffers provided must be at least this
 // long, though these numbers are subject to change:
 //     Int32, UInt32:                   12 bytes
