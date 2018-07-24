@@ -8,4 +8,4 @@ steps:
   args:
     - '-c'
     - |
-      bazel test //next2018/... --config=rbe
+      bazel test //tensorflow/core/... --config=rbe
