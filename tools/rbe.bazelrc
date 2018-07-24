@@ -1,5 +1,5 @@
 startup --host_jvm_args=-Dbazel.DigestFunction=SHA256
-build:rbe --verbose_failures --jobs 250 --spawn_strategy=remote --strategy=Javac=remote --strategy=Closure=remote --genrule_strategy=remote
+build:rbe --verbose_failures --jobs 600 --spawn_strategy=remote --strategy=Javac=remote --strategy=Closure=remote --genrule_strategy=remote
 build:rbe --experimental_strict_action_env=true --host_javabase=@bazel_toolchains_test_suite_repo//configs/ubuntu16_04_clang/1.0:jdk8
 build:rbe --javabase=@bazel_toolchains_test_suite_repo//configs/ubuntu16_04_clang/1.0:jdk8 --tls_enabled --auth_enabled
 build:rbe --auth_scope=https://www.googleapis.com/auth/cloud-source-tools --auth_credentials=creds/demo-cred.json
