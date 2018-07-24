@@ -5,6 +5,14 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.*;
 
 import java.lang.reflect.Modifier;
 
@@ -19,242 +27,273 @@ public class StructSerialProxyAPIHelperTest {
 @Test
 public void testDoubleValidStructSerialProxyAPI() {
 	StructSerialProxyAPIHelper helper = new StructSerialProxyAPIHelper();
+	
+	try{
+    		
+	    //create a temp file
+	    File temp = File.createTempFile("tempfileStructSerialProxyAPIHelper", ".tmp"); 
+		//Get tempropary file path
+		String absolutePath = temp.getAbsolutePath();
+		String tempFilePath = absolutePath.
+		    substring(0,absolutePath.lastIndexOf(File.separator));
+
+		//System.out.println("Temp file path : " + tempFilePath);
+	
+    //write it
+	    BufferedWriter bw = new BufferedWriter(new FileWriter(temp));
+	    for(int i=0; i<2999999; i++) {
+			bw.write(i + "\n");
+		}
+	    bw.close();
+		
+		// read it
+		byte[] myBytes = Files.readAllBytes(temp.toPath());
+		
+		// randomize it
+		List<Byte> myBytesList = new ArrayList<>();
+		for(int i = 1; i<myBytes.length; i++) {
+			myBytesList.add(myBytes[i]);
+		}
+		Collections.shuffle(myBytesList);
+		
+		
+		
+	}catch(IOException e){
+	
+	    e.printStackTrace();
+	
+	}
+	
 	assertEquals(helper.help() + helper.help(),"validvalid");
 }
 @Test
-public void testOtherFalseStructSerialProxyAPI() {
-	assertFalse(1==2);
-	assertFalse(2==3);
-	assertFalse(1==3);
-}
-@Test
-public void testThisFalseStructSerialProxyAPI() {
+public void testFalseStructSerialProxyAPI() {
 	assertFalse(1==2);
 	assertFalse(2==3);
 	assertFalse(1==3);
 }
 @Test
 public void bigFalseTestStructSerialProxyAPI0() {
-	assertFalse(21571==21571+1);
+	assertFalse(26855==26855+1);
 }
 @Test
 public void bigFalseTestStructSerialProxyAPI1() {
-	assertFalse(29703==29703+1);
+	assertFalse(28449==28449+1);
 }
 @Test
 public void bigFalseTestStructSerialProxyAPI2() {
-	assertFalse(4679==4679+1);
+	assertFalse(27822==27822+1);
 }
 @Test
 public void bigFalseTestStructSerialProxyAPI3() {
-	assertFalse(11697==11697+1);
+	assertFalse(16961==16961+1);
 }
 @Test
 public void bigFalseTestStructSerialProxyAPI4() {
-	assertFalse(27179==27179+1);
+	assertFalse(27983==27983+1);
 }
 @Test
 public void bigFalseTestStructSerialProxyAPI5() {
-	assertFalse(3191==3191+1);
+	assertFalse(26376==26376+1);
 }
 @Test
 public void bigFalseTestStructSerialProxyAPI6() {
-	assertFalse(3107==3107+1);
+	assertFalse(27306==27306+1);
 }
 @Test
 public void bigFalseTestStructSerialProxyAPI7() {
-	assertFalse(32472==32472+1);
+	assertFalse(13613==13613+1);
 }
 @Test
 public void bigFalseTestStructSerialProxyAPI8() {
-	assertFalse(23671==23671+1);
+	assertFalse(4804==4804+1);
 }
 @Test
 public void bigFalseTestStructSerialProxyAPI9() {
-	assertFalse(26446==26446+1);
+	assertFalse(3807==3807+1);
 }
 @Test
 public void bigFalseTestStructSerialProxyAPI10() {
-	assertFalse(25181==25181+1);
+	assertFalse(17297==17297+1);
 }
 @Test
 public void bigFalseTestStructSerialProxyAPI11() {
-	assertFalse(4196==4196+1);
+	assertFalse(18723==18723+1);
 }
 @Test
 public void bigFalseTestStructSerialProxyAPI12() {
-	assertFalse(22845==22845+1);
+	assertFalse(17072==17072+1);
 }
 @Test
 public void bigFalseTestStructSerialProxyAPI13() {
-	assertFalse(7192==7192+1);
+	assertFalse(5798==5798+1);
 }
 @Test
 public void bigFalseTestStructSerialProxyAPI14() {
-	assertFalse(10105==10105+1);
+	assertFalse(17358==17358+1);
 }
 @Test
 public void bigFalseTestStructSerialProxyAPI15() {
-	assertFalse(20402==20402+1);
+	assertFalse(2904==2904+1);
 }
 @Test
 public void bigFalseTestStructSerialProxyAPI16() {
-	assertFalse(12188==12188+1);
+	assertFalse(4400==4400+1);
 }
 @Test
 public void bigFalseTestStructSerialProxyAPI17() {
-	assertFalse(19467==19467+1);
+	assertFalse(21243==21243+1);
 }
 @Test
 public void bigFalseTestStructSerialProxyAPI18() {
-	assertFalse(22649==22649+1);
+	assertFalse(17050==17050+1);
 }
 @Test
 public void bigFalseTestStructSerialProxyAPI19() {
-	assertFalse(28423==28423+1);
+	assertFalse(15970==15970+1);
 }
 @Test
 public void bigFalseTestStructSerialProxyAPI20() {
-	assertFalse(13980==13980+1);
+	assertFalse(5504==5504+1);
 }
 @Test
 public void bigFalseTestStructSerialProxyAPI21() {
-	assertFalse(30124==30124+1);
+	assertFalse(19219==19219+1);
 }
 @Test
 public void bigFalseTestStructSerialProxyAPI22() {
-	assertFalse(25886==25886+1);
+	assertFalse(24140==24140+1);
 }
 @Test
 public void bigFalseTestStructSerialProxyAPI23() {
-	assertFalse(12054==12054+1);
+	assertFalse(11923==11923+1);
 }
 @Test
 public void bigFalseTestStructSerialProxyAPI24() {
-	assertFalse(17858==17858+1);
+	assertFalse(23844==23844+1);
 }
 @Test
 public void bigFalseTestStructSerialProxyAPI25() {
-	assertFalse(22337==22337+1);
+	assertFalse(10871==10871+1);
 }
 @Test
 public void bigFalseTestStructSerialProxyAPI26() {
-	assertFalse(32734==32734+1);
+	assertFalse(12646==12646+1);
 }
 @Test
 public void bigFalseTestStructSerialProxyAPI27() {
-	assertFalse(13651==13651+1);
+	assertFalse(28696==28696+1);
 }
 @Test
 public void bigFalseTestStructSerialProxyAPI28() {
-	assertFalse(7030==7030+1);
+	assertFalse(26076==26076+1);
 }
 @Test
 public void bigFalseTestStructSerialProxyAPI29() {
-	assertFalse(3066==3066+1);
+	assertFalse(4735==4735+1);
 }
 @Test
 public void bigFalseTestStructSerialProxyAPI30() {
-	assertFalse(29092==29092+1);
+	assertFalse(19547==19547+1);
 }
 @Test
 public void bigFalseTestStructSerialProxyAPI31() {
-	assertFalse(31478==31478+1);
+	assertFalse(25302==25302+1);
 }
 @Test
 public void bigFalseTestStructSerialProxyAPI32() {
-	assertFalse(19734==19734+1);
+	assertFalse(19013==19013+1);
 }
 @Test
 public void bigFalseTestStructSerialProxyAPI33() {
-	assertFalse(20446==20446+1);
+	assertFalse(1935==1935+1);
 }
 @Test
 public void bigFalseTestStructSerialProxyAPI34() {
-	assertFalse(27978==27978+1);
+	assertFalse(33==33+1);
 }
 @Test
 public void bigFalseTestStructSerialProxyAPI35() {
-	assertFalse(8398==8398+1);
+	assertFalse(6144==6144+1);
 }
 @Test
 public void bigFalseTestStructSerialProxyAPI36() {
-	assertFalse(7382==7382+1);
+	assertFalse(3407==3407+1);
 }
 @Test
 public void bigFalseTestStructSerialProxyAPI37() {
-	assertFalse(5750==5750+1);
+	assertFalse(30228==30228+1);
 }
 @Test
 public void bigFalseTestStructSerialProxyAPI38() {
-	assertFalse(7895==7895+1);
+	assertFalse(17787==17787+1);
 }
 @Test
 public void bigFalseTestStructSerialProxyAPI39() {
-	assertFalse(13258==13258+1);
+	assertFalse(30072==30072+1);
 }
 @Test
 public void bigFalseTestStructSerialProxyAPI40() {
-	assertFalse(20830==20830+1);
+	assertFalse(12386==12386+1);
 }
 @Test
 public void bigFalseTestStructSerialProxyAPI41() {
-	assertFalse(24636==24636+1);
+	assertFalse(2878==2878+1);
 }
 @Test
 public void bigFalseTestStructSerialProxyAPI42() {
-	assertFalse(29304==29304+1);
+	assertFalse(19716==19716+1);
 }
 @Test
 public void bigFalseTestStructSerialProxyAPI43() {
-	assertFalse(11848==11848+1);
+	assertFalse(13035==13035+1);
 }
 @Test
 public void bigFalseTestStructSerialProxyAPI44() {
-	assertFalse(27425==27425+1);
+	assertFalse(79==79+1);
 }
 @Test
 public void bigFalseTestStructSerialProxyAPI45() {
-	assertFalse(31426==31426+1);
+	assertFalse(23931==23931+1);
 }
 @Test
 public void bigFalseTestStructSerialProxyAPI46() {
-	assertFalse(20288==20288+1);
+	assertFalse(1018==1018+1);
 }
 @Test
 public void bigFalseTestStructSerialProxyAPI47() {
-	assertFalse(16925==16925+1);
+	assertFalse(3243==3243+1);
 }
 @Test
 public void bigFalseTestStructSerialProxyAPI48() {
-	assertFalse(21374==21374+1);
+	assertFalse(17657==17657+1);
 }
 @Test
 public void bigFalseTestStructSerialProxyAPI49() {
-	assertFalse(6051==6051+1);
+	assertFalse(8375==8375+1);
 }
 @Test
 public void bigFalseTestStructSerialProxyAPI50() {
-	assertFalse(16799==16799+1);
+	assertFalse(6608==6608+1);
 }
 @Test
 public void bigFalseTestStructSerialProxyAPI51() {
-	assertFalse(14177==14177+1);
+	assertFalse(18507==18507+1);
 }
 @Test
 public void bigFalseTestStructSerialProxyAPI52() {
-	assertFalse(24985==24985+1);
+	assertFalse(16320==16320+1);
 }
 @Test
 public void bigFalseTestStructSerialProxyAPI53() {
-	assertFalse(26154==26154+1);
+	assertFalse(25172==25172+1);
 }
 @Test
 public void bigFalseTestStructSerialProxyAPI54() {
-	assertFalse(20900==20900+1);
+	assertFalse(21106==21106+1);
 }
 @Test
 public void bigFalseTestStructSerialProxyAPI55() {
-	assertFalse(27647==27647+1);
+	assertFalse(26364==26364+1);
 }
 }

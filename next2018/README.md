@@ -16,19 +16,22 @@ This application has been successfully built on Ubuntu 16.04. It _should_ work o
   * Configure the local JDK to load the native library: add `export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${cwd}/bazel-bin/tensorflow/java` to ~/.bashrc; `source ~/.bashrc`
 * Setup GCP (at root of repo)
   * Authenticate: `gcloud init` --> choose project "btd-pm" and default zone "us-central1-c"
-  * Copy service account credentials: `gsutil cp btd-pm:next2018-dem-bazel/creds/demo-cred.json ./creds/`
+  * Copy service account credentials: `gsutil cp gs://next2018-demo-bazel/creds/demo-cred.json ./creds/`
 
 ### Building
 Run commands in this directory
-#### To build and run with Maven:
-`mvn package && java -jar target/tfjavademo-0.1-jar-with-dependencies.jar`
-#### To build and run with Bazel (local execution):
-`bazel test ... && bazel run tfjavademo`
-#### To build and run with Bazel (remote execution):
+#### To build and run JAVA APP with Maven:
+`mvn test`
+#### To build and run JAVA PP with Bazel (local execution):
+`bazel test :all`
+
+#### To build TF with Bazel (local execution):
+`bazel test //tensorflow/core/util/...`
+#### To build TF with Bazel (remote execution):
 `bazel test ... --config=rbe && bazel run tfjavademo --config=rbe`
 
 ### Demo script
 1. Java change: Edit a file in src/main/java/org/apache/commons/lang3/
 1. Re-run Maven and Bazel (local): both should re-execute JUnit tests
-1. C++ chnange: Edit a file in ../tensorflow/core
+1. C++ chnange: Edit ../tensorflow/core/kernels/???
 1. Re-run Bazel (local) and Bazel (remote): both should re-execute C++ tests

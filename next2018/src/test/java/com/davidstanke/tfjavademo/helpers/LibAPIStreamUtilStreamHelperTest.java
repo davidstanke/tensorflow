@@ -5,6 +5,14 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.*;
 
 import java.lang.reflect.Modifier;
 
@@ -17,227 +25,281 @@ public class LibAPIStreamUtilStreamHelperTest {
 		assertEquals(helper.help(),"valid");
     }
 @Test
+public void testDoubleValidLibAPIStreamUtilStream() {
+	LibAPIStreamUtilStreamHelper helper = new LibAPIStreamUtilStreamHelper();
+	
+	try{
+    		
+	    //create a temp file
+	    File temp = File.createTempFile("tempfileLibAPIStreamUtilStreamHelper", ".tmp"); 
+		//Get tempropary file path
+		String absolutePath = temp.getAbsolutePath();
+		String tempFilePath = absolutePath.
+		    substring(0,absolutePath.lastIndexOf(File.separator));
+
+		//System.out.println("Temp file path : " + tempFilePath);
+	
+    //write it
+	    BufferedWriter bw = new BufferedWriter(new FileWriter(temp));
+	    for(int i=0; i<2999999; i++) {
+			bw.write(i + "\n");
+		}
+	    bw.close();
+		
+		// read it
+		byte[] myBytes = Files.readAllBytes(temp.toPath());
+		
+		// randomize it
+		List<Byte> myBytesList = new ArrayList<>();
+		for(int i = 1; i<myBytes.length; i++) {
+			myBytesList.add(myBytes[i]);
+		}
+		Collections.shuffle(myBytesList);
+		
+		
+		
+	}catch(IOException e){
+	
+	    e.printStackTrace();
+	
+	}
+	
+	assertEquals(helper.help() + helper.help(),"validvalid");
+}
+@Test
+public void testOtherFalseLibAPIStreamUtilStream() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+@Test
+public void testAnotherFalseLibAPIStreamUtilStream() {
+	assertFalse(1==2);
+	assertFalse(2==3);
+	assertFalse(1==3);
+}
+@Test
 public void bigFalseTestLibAPIStreamUtilStream0() {
-	assertFalse(15415==15415+1);
+	assertFalse(30696==30696+1);
 }
 @Test
 public void bigFalseTestLibAPIStreamUtilStream1() {
-	assertFalse(10121==10121+1);
+	assertFalse(13311==13311+1);
 }
 @Test
 public void bigFalseTestLibAPIStreamUtilStream2() {
-	assertFalse(1412==1412+1);
+	assertFalse(7148==7148+1);
 }
 @Test
 public void bigFalseTestLibAPIStreamUtilStream3() {
-	assertFalse(17789==17789+1);
+	assertFalse(30604==30604+1);
 }
 @Test
 public void bigFalseTestLibAPIStreamUtilStream4() {
-	assertFalse(8965==8965+1);
+	assertFalse(28851==28851+1);
 }
 @Test
 public void bigFalseTestLibAPIStreamUtilStream5() {
-	assertFalse(4843==4843+1);
+	assertFalse(14065==14065+1);
 }
 @Test
 public void bigFalseTestLibAPIStreamUtilStream6() {
-	assertFalse(18068==18068+1);
+	assertFalse(29309==29309+1);
 }
 @Test
 public void bigFalseTestLibAPIStreamUtilStream7() {
-	assertFalse(464==464+1);
+	assertFalse(6588==6588+1);
 }
 @Test
 public void bigFalseTestLibAPIStreamUtilStream8() {
-	assertFalse(28177==28177+1);
+	assertFalse(31633==31633+1);
 }
 @Test
 public void bigFalseTestLibAPIStreamUtilStream9() {
-	assertFalse(22322==22322+1);
+	assertFalse(15911==15911+1);
 }
 @Test
 public void bigFalseTestLibAPIStreamUtilStream10() {
-	assertFalse(16654==16654+1);
+	assertFalse(19539==19539+1);
 }
 @Test
 public void bigFalseTestLibAPIStreamUtilStream11() {
-	assertFalse(31797==31797+1);
+	assertFalse(17973==17973+1);
 }
 @Test
 public void bigFalseTestLibAPIStreamUtilStream12() {
-	assertFalse(20427==20427+1);
+	assertFalse(10899==10899+1);
 }
 @Test
 public void bigFalseTestLibAPIStreamUtilStream13() {
-	assertFalse(17216==17216+1);
+	assertFalse(17144==17144+1);
 }
 @Test
 public void bigFalseTestLibAPIStreamUtilStream14() {
-	assertFalse(5346==5346+1);
+	assertFalse(1550==1550+1);
 }
 @Test
 public void bigFalseTestLibAPIStreamUtilStream15() {
-	assertFalse(25502==25502+1);
+	assertFalse(24714==24714+1);
 }
 @Test
 public void bigFalseTestLibAPIStreamUtilStream16() {
-	assertFalse(5817==5817+1);
+	assertFalse(27871==27871+1);
 }
 @Test
 public void bigFalseTestLibAPIStreamUtilStream17() {
-	assertFalse(7906==7906+1);
+	assertFalse(13074==13074+1);
 }
 @Test
 public void bigFalseTestLibAPIStreamUtilStream18() {
-	assertFalse(18328==18328+1);
+	assertFalse(9551==9551+1);
 }
 @Test
 public void bigFalseTestLibAPIStreamUtilStream19() {
-	assertFalse(501==501+1);
+	assertFalse(6393==6393+1);
 }
 @Test
 public void bigFalseTestLibAPIStreamUtilStream20() {
-	assertFalse(15087==15087+1);
+	assertFalse(11070==11070+1);
 }
 @Test
 public void bigFalseTestLibAPIStreamUtilStream21() {
-	assertFalse(12440==12440+1);
+	assertFalse(16403==16403+1);
 }
 @Test
 public void bigFalseTestLibAPIStreamUtilStream22() {
-	assertFalse(25648==25648+1);
+	assertFalse(17958==17958+1);
 }
 @Test
 public void bigFalseTestLibAPIStreamUtilStream23() {
-	assertFalse(21700==21700+1);
+	assertFalse(27496==27496+1);
 }
 @Test
 public void bigFalseTestLibAPIStreamUtilStream24() {
-	assertFalse(18253==18253+1);
+	assertFalse(8547==8547+1);
 }
 @Test
 public void bigFalseTestLibAPIStreamUtilStream25() {
-	assertFalse(21540==21540+1);
+	assertFalse(3303==3303+1);
 }
 @Test
 public void bigFalseTestLibAPIStreamUtilStream26() {
-	assertFalse(15545==15545+1);
+	assertFalse(29503==29503+1);
 }
 @Test
 public void bigFalseTestLibAPIStreamUtilStream27() {
-	assertFalse(1190==1190+1);
+	assertFalse(4641==4641+1);
 }
 @Test
 public void bigFalseTestLibAPIStreamUtilStream28() {
-	assertFalse(6779==6779+1);
+	assertFalse(32764==32764+1);
 }
 @Test
 public void bigFalseTestLibAPIStreamUtilStream29() {
-	assertFalse(28117==28117+1);
+	assertFalse(21732==21732+1);
 }
 @Test
 public void bigFalseTestLibAPIStreamUtilStream30() {
-	assertFalse(10675==10675+1);
+	assertFalse(21708==21708+1);
 }
 @Test
 public void bigFalseTestLibAPIStreamUtilStream31() {
-	assertFalse(26481==26481+1);
+	assertFalse(26701==26701+1);
 }
 @Test
 public void bigFalseTestLibAPIStreamUtilStream32() {
-	assertFalse(15270==15270+1);
+	assertFalse(9082==9082+1);
 }
 @Test
 public void bigFalseTestLibAPIStreamUtilStream33() {
-	assertFalse(18064==18064+1);
+	assertFalse(26790==26790+1);
 }
 @Test
 public void bigFalseTestLibAPIStreamUtilStream34() {
-	assertFalse(25382==25382+1);
+	assertFalse(25138==25138+1);
 }
 @Test
 public void bigFalseTestLibAPIStreamUtilStream35() {
-	assertFalse(31009==31009+1);
+	assertFalse(30769==30769+1);
 }
 @Test
 public void bigFalseTestLibAPIStreamUtilStream36() {
-	assertFalse(16119==16119+1);
+	assertFalse(27553==27553+1);
 }
 @Test
 public void bigFalseTestLibAPIStreamUtilStream37() {
-	assertFalse(7331==7331+1);
+	assertFalse(7340==7340+1);
 }
 @Test
 public void bigFalseTestLibAPIStreamUtilStream38() {
-	assertFalse(20350==20350+1);
+	assertFalse(627==627+1);
 }
 @Test
 public void bigFalseTestLibAPIStreamUtilStream39() {
-	assertFalse(30595==30595+1);
+	assertFalse(12588==12588+1);
 }
 @Test
 public void bigFalseTestLibAPIStreamUtilStream40() {
-	assertFalse(30168==30168+1);
+	assertFalse(32719==32719+1);
 }
 @Test
 public void bigFalseTestLibAPIStreamUtilStream41() {
-	assertFalse(30025==30025+1);
+	assertFalse(1455==1455+1);
 }
 @Test
 public void bigFalseTestLibAPIStreamUtilStream42() {
-	assertFalse(25645==25645+1);
+	assertFalse(18270==18270+1);
 }
 @Test
 public void bigFalseTestLibAPIStreamUtilStream43() {
-	assertFalse(3238==3238+1);
+	assertFalse(364==364+1);
 }
 @Test
 public void bigFalseTestLibAPIStreamUtilStream44() {
-	assertFalse(26342==26342+1);
+	assertFalse(3084==3084+1);
 }
 @Test
 public void bigFalseTestLibAPIStreamUtilStream45() {
-	assertFalse(31485==31485+1);
+	assertFalse(7878==7878+1);
 }
 @Test
 public void bigFalseTestLibAPIStreamUtilStream46() {
-	assertFalse(29695==29695+1);
+	assertFalse(12152==12152+1);
 }
 @Test
 public void bigFalseTestLibAPIStreamUtilStream47() {
-	assertFalse(13313==13313+1);
+	assertFalse(20340==20340+1);
 }
 @Test
 public void bigFalseTestLibAPIStreamUtilStream48() {
-	assertFalse(18868==18868+1);
+	assertFalse(17109==17109+1);
 }
 @Test
 public void bigFalseTestLibAPIStreamUtilStream49() {
-	assertFalse(29823==29823+1);
+	assertFalse(13627==13627+1);
 }
 @Test
 public void bigFalseTestLibAPIStreamUtilStream50() {
-	assertFalse(1852==1852+1);
+	assertFalse(6824==6824+1);
 }
 @Test
 public void bigFalseTestLibAPIStreamUtilStream51() {
-	assertFalse(18020==18020+1);
+	assertFalse(3918==3918+1);
 }
 @Test
 public void bigFalseTestLibAPIStreamUtilStream52() {
-	assertFalse(581==581+1);
+	assertFalse(12200==12200+1);
 }
 @Test
 public void bigFalseTestLibAPIStreamUtilStream53() {
-	assertFalse(8359==8359+1);
+	assertFalse(13866==13866+1);
 }
 @Test
 public void bigFalseTestLibAPIStreamUtilStream54() {
-	assertFalse(6527==6527+1);
+	assertFalse(23974==23974+1);
 }
 @Test
 public void bigFalseTestLibAPIStreamUtilStream55() {
-	assertFalse(22688==22688+1);
+	assertFalse(28559==28559+1);
 }
 }

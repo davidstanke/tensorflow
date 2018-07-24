@@ -5,6 +5,14 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.*;
 
 import java.lang.reflect.Modifier;
 
@@ -17,245 +25,233 @@ public class TensorMapNumStreamHelperTest {
 		assertEquals(helper.help(),"valid");
     }
 @Test
-public void testOtherFalseTensorMapNumStream() {
-	assertFalse(1==2);
-	assertFalse(2==3);
-	assertFalse(1==3);
-}
-@Test
 public void testAnotherFalseTensorMapNumStream() {
 	assertFalse(1==2);
 	assertFalse(2==3);
 	assertFalse(1==3);
 }
 @Test
-public void testThisFalseTensorMapNumStream() {
-	assertFalse(1==2);
-	assertFalse(2==3);
-	assertFalse(1==3);
-}
-@Test
 public void bigFalseTestTensorMapNumStream0() {
-	assertFalse(23972==23972+1);
+	assertFalse(31329==31329+1);
 }
 @Test
 public void bigFalseTestTensorMapNumStream1() {
-	assertFalse(4061==4061+1);
+	assertFalse(2108==2108+1);
 }
 @Test
 public void bigFalseTestTensorMapNumStream2() {
-	assertFalse(30068==30068+1);
+	assertFalse(8765==8765+1);
 }
 @Test
 public void bigFalseTestTensorMapNumStream3() {
-	assertFalse(14211==14211+1);
+	assertFalse(4395==4395+1);
 }
 @Test
 public void bigFalseTestTensorMapNumStream4() {
-	assertFalse(17991==17991+1);
+	assertFalse(22789==22789+1);
 }
 @Test
 public void bigFalseTestTensorMapNumStream5() {
-	assertFalse(25598==25598+1);
+	assertFalse(9207==9207+1);
 }
 @Test
 public void bigFalseTestTensorMapNumStream6() {
-	assertFalse(994==994+1);
+	assertFalse(4012==4012+1);
 }
 @Test
 public void bigFalseTestTensorMapNumStream7() {
-	assertFalse(22916==22916+1);
+	assertFalse(7243==7243+1);
 }
 @Test
 public void bigFalseTestTensorMapNumStream8() {
-	assertFalse(10754==10754+1);
+	assertFalse(31164==31164+1);
 }
 @Test
 public void bigFalseTestTensorMapNumStream9() {
-	assertFalse(16020==16020+1);
+	assertFalse(17875==17875+1);
 }
 @Test
 public void bigFalseTestTensorMapNumStream10() {
-	assertFalse(18781==18781+1);
+	assertFalse(1216==1216+1);
 }
 @Test
 public void bigFalseTestTensorMapNumStream11() {
-	assertFalse(19650==19650+1);
+	assertFalse(11324==11324+1);
 }
 @Test
 public void bigFalseTestTensorMapNumStream12() {
-	assertFalse(12010==12010+1);
+	assertFalse(11020==11020+1);
 }
 @Test
 public void bigFalseTestTensorMapNumStream13() {
-	assertFalse(19819==19819+1);
+	assertFalse(17560==17560+1);
 }
 @Test
 public void bigFalseTestTensorMapNumStream14() {
-	assertFalse(12784==12784+1);
+	assertFalse(26242==26242+1);
 }
 @Test
 public void bigFalseTestTensorMapNumStream15() {
-	assertFalse(361==361+1);
+	assertFalse(29944==29944+1);
 }
 @Test
 public void bigFalseTestTensorMapNumStream16() {
-	assertFalse(13835==13835+1);
+	assertFalse(21918==21918+1);
 }
 @Test
 public void bigFalseTestTensorMapNumStream17() {
-	assertFalse(9401==9401+1);
+	assertFalse(6561==6561+1);
 }
 @Test
 public void bigFalseTestTensorMapNumStream18() {
-	assertFalse(32044==32044+1);
+	assertFalse(2292==2292+1);
 }
 @Test
 public void bigFalseTestTensorMapNumStream19() {
-	assertFalse(1665==1665+1);
+	assertFalse(8229==8229+1);
 }
 @Test
 public void bigFalseTestTensorMapNumStream20() {
-	assertFalse(29240==29240+1);
+	assertFalse(22750==22750+1);
 }
 @Test
 public void bigFalseTestTensorMapNumStream21() {
-	assertFalse(7162==7162+1);
+	assertFalse(22343==22343+1);
 }
 @Test
 public void bigFalseTestTensorMapNumStream22() {
-	assertFalse(20439==20439+1);
+	assertFalse(785==785+1);
 }
 @Test
 public void bigFalseTestTensorMapNumStream23() {
-	assertFalse(30768==30768+1);
+	assertFalse(22379==22379+1);
 }
 @Test
 public void bigFalseTestTensorMapNumStream24() {
-	assertFalse(8083==8083+1);
+	assertFalse(5461==5461+1);
 }
 @Test
 public void bigFalseTestTensorMapNumStream25() {
-	assertFalse(7308==7308+1);
+	assertFalse(6670==6670+1);
 }
 @Test
 public void bigFalseTestTensorMapNumStream26() {
-	assertFalse(13395==13395+1);
+	assertFalse(18057==18057+1);
 }
 @Test
 public void bigFalseTestTensorMapNumStream27() {
-	assertFalse(5554==5554+1);
+	assertFalse(10102==10102+1);
 }
 @Test
 public void bigFalseTestTensorMapNumStream28() {
-	assertFalse(10203==10203+1);
+	assertFalse(16582==16582+1);
 }
 @Test
 public void bigFalseTestTensorMapNumStream29() {
-	assertFalse(15883==15883+1);
+	assertFalse(24722==24722+1);
 }
 @Test
 public void bigFalseTestTensorMapNumStream30() {
-	assertFalse(13776==13776+1);
+	assertFalse(30521==30521+1);
 }
 @Test
 public void bigFalseTestTensorMapNumStream31() {
-	assertFalse(15128==15128+1);
+	assertFalse(1994==1994+1);
 }
 @Test
 public void bigFalseTestTensorMapNumStream32() {
-	assertFalse(16248==16248+1);
+	assertFalse(24586==24586+1);
 }
 @Test
 public void bigFalseTestTensorMapNumStream33() {
-	assertFalse(19562==19562+1);
+	assertFalse(30256==30256+1);
 }
 @Test
 public void bigFalseTestTensorMapNumStream34() {
-	assertFalse(561==561+1);
+	assertFalse(15980==15980+1);
 }
 @Test
 public void bigFalseTestTensorMapNumStream35() {
-	assertFalse(15044==15044+1);
+	assertFalse(4938==4938+1);
 }
 @Test
 public void bigFalseTestTensorMapNumStream36() {
-	assertFalse(18248==18248+1);
+	assertFalse(683==683+1);
 }
 @Test
 public void bigFalseTestTensorMapNumStream37() {
-	assertFalse(5078==5078+1);
+	assertFalse(23668==23668+1);
 }
 @Test
 public void bigFalseTestTensorMapNumStream38() {
-	assertFalse(16063==16063+1);
+	assertFalse(5588==5588+1);
 }
 @Test
 public void bigFalseTestTensorMapNumStream39() {
-	assertFalse(21152==21152+1);
+	assertFalse(15750==15750+1);
 }
 @Test
 public void bigFalseTestTensorMapNumStream40() {
-	assertFalse(32551==32551+1);
+	assertFalse(7235==7235+1);
 }
 @Test
 public void bigFalseTestTensorMapNumStream41() {
-	assertFalse(3659==3659+1);
+	assertFalse(24389==24389+1);
 }
 @Test
 public void bigFalseTestTensorMapNumStream42() {
-	assertFalse(31632==31632+1);
+	assertFalse(17990==17990+1);
 }
 @Test
 public void bigFalseTestTensorMapNumStream43() {
-	assertFalse(14625==14625+1);
+	assertFalse(4296==4296+1);
 }
 @Test
 public void bigFalseTestTensorMapNumStream44() {
-	assertFalse(21825==21825+1);
+	assertFalse(6035==6035+1);
 }
 @Test
 public void bigFalseTestTensorMapNumStream45() {
-	assertFalse(20210==20210+1);
+	assertFalse(16338==16338+1);
 }
 @Test
 public void bigFalseTestTensorMapNumStream46() {
-	assertFalse(29109==29109+1);
+	assertFalse(5688==5688+1);
 }
 @Test
 public void bigFalseTestTensorMapNumStream47() {
-	assertFalse(32255==32255+1);
+	assertFalse(16604==16604+1);
 }
 @Test
 public void bigFalseTestTensorMapNumStream48() {
-	assertFalse(24087==24087+1);
+	assertFalse(32610==32610+1);
 }
 @Test
 public void bigFalseTestTensorMapNumStream49() {
-	assertFalse(18241==18241+1);
+	assertFalse(8763==8763+1);
 }
 @Test
 public void bigFalseTestTensorMapNumStream50() {
-	assertFalse(30758==30758+1);
+	assertFalse(25596==25596+1);
 }
 @Test
 public void bigFalseTestTensorMapNumStream51() {
-	assertFalse(15025==15025+1);
+	assertFalse(7843==7843+1);
 }
 @Test
 public void bigFalseTestTensorMapNumStream52() {
-	assertFalse(16722==16722+1);
+	assertFalse(22811==22811+1);
 }
 @Test
 public void bigFalseTestTensorMapNumStream53() {
-	assertFalse(16849==16849+1);
+	assertFalse(10752==10752+1);
 }
 @Test
 public void bigFalseTestTensorMapNumStream54() {
-	assertFalse(23406==23406+1);
+	assertFalse(10170==10170+1);
 }
 @Test
 public void bigFalseTestTensorMapNumStream55() {
-	assertFalse(20138==20138+1);
+	assertFalse(14422==14422+1);
 }
 }

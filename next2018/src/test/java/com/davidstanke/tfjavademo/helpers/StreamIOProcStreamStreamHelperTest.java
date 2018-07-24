@@ -5,6 +5,14 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.*;
 
 import java.lang.reflect.Modifier;
 
@@ -17,233 +25,275 @@ public class StreamIOProcStreamStreamHelperTest {
 		assertEquals(helper.help(),"valid");
     }
 @Test
-public void testFalseStreamIOProcStreamStream() {
+public void testDoubleValidStreamIOProcStreamStream() {
+	StreamIOProcStreamStreamHelper helper = new StreamIOProcStreamStreamHelper();
+	
+	try{
+    		
+	    //create a temp file
+	    File temp = File.createTempFile("tempfileStreamIOProcStreamStreamHelper", ".tmp"); 
+		//Get tempropary file path
+		String absolutePath = temp.getAbsolutePath();
+		String tempFilePath = absolutePath.
+		    substring(0,absolutePath.lastIndexOf(File.separator));
+
+		//System.out.println("Temp file path : " + tempFilePath);
+	
+    //write it
+	    BufferedWriter bw = new BufferedWriter(new FileWriter(temp));
+	    for(int i=0; i<2999999; i++) {
+			bw.write(i + "\n");
+		}
+	    bw.close();
+		
+		// read it
+		byte[] myBytes = Files.readAllBytes(temp.toPath());
+		
+		// randomize it
+		List<Byte> myBytesList = new ArrayList<>();
+		for(int i = 1; i<myBytes.length; i++) {
+			myBytesList.add(myBytes[i]);
+		}
+		Collections.shuffle(myBytesList);
+		
+		
+		
+	}catch(IOException e){
+	
+	    e.printStackTrace();
+	
+	}
+	
+	assertEquals(helper.help() + helper.help(),"validvalid");
+}
+@Test
+public void testAnotherFalseStreamIOProcStreamStream() {
 	assertFalse(1==2);
 	assertFalse(2==3);
 	assertFalse(1==3);
 }
 @Test
 public void bigFalseTestStreamIOProcStreamStream0() {
-	assertFalse(12076==12076+1);
+	assertFalse(25932==25932+1);
 }
 @Test
 public void bigFalseTestStreamIOProcStreamStream1() {
-	assertFalse(15558==15558+1);
+	assertFalse(8038==8038+1);
 }
 @Test
 public void bigFalseTestStreamIOProcStreamStream2() {
-	assertFalse(23047==23047+1);
+	assertFalse(32161==32161+1);
 }
 @Test
 public void bigFalseTestStreamIOProcStreamStream3() {
-	assertFalse(30328==30328+1);
+	assertFalse(6466==6466+1);
 }
 @Test
 public void bigFalseTestStreamIOProcStreamStream4() {
-	assertFalse(26801==26801+1);
+	assertFalse(2227==2227+1);
 }
 @Test
 public void bigFalseTestStreamIOProcStreamStream5() {
-	assertFalse(28069==28069+1);
+	assertFalse(31468==31468+1);
 }
 @Test
 public void bigFalseTestStreamIOProcStreamStream6() {
-	assertFalse(14792==14792+1);
+	assertFalse(17745==17745+1);
 }
 @Test
 public void bigFalseTestStreamIOProcStreamStream7() {
-	assertFalse(9934==9934+1);
+	assertFalse(16351==16351+1);
 }
 @Test
 public void bigFalseTestStreamIOProcStreamStream8() {
-	assertFalse(29436==29436+1);
+	assertFalse(15418==15418+1);
 }
 @Test
 public void bigFalseTestStreamIOProcStreamStream9() {
-	assertFalse(18693==18693+1);
+	assertFalse(15952==15952+1);
 }
 @Test
 public void bigFalseTestStreamIOProcStreamStream10() {
-	assertFalse(16725==16725+1);
+	assertFalse(20989==20989+1);
 }
 @Test
 public void bigFalseTestStreamIOProcStreamStream11() {
-	assertFalse(19514==19514+1);
+	assertFalse(32220==32220+1);
 }
 @Test
 public void bigFalseTestStreamIOProcStreamStream12() {
-	assertFalse(5362==5362+1);
+	assertFalse(2711==2711+1);
 }
 @Test
 public void bigFalseTestStreamIOProcStreamStream13() {
-	assertFalse(10319==10319+1);
+	assertFalse(31500==31500+1);
 }
 @Test
 public void bigFalseTestStreamIOProcStreamStream14() {
-	assertFalse(21391==21391+1);
+	assertFalse(18198==18198+1);
 }
 @Test
 public void bigFalseTestStreamIOProcStreamStream15() {
-	assertFalse(3017==3017+1);
+	assertFalse(30030==30030+1);
 }
 @Test
 public void bigFalseTestStreamIOProcStreamStream16() {
-	assertFalse(15281==15281+1);
+	assertFalse(6508==6508+1);
 }
 @Test
 public void bigFalseTestStreamIOProcStreamStream17() {
-	assertFalse(22715==22715+1);
+	assertFalse(3451==3451+1);
 }
 @Test
 public void bigFalseTestStreamIOProcStreamStream18() {
-	assertFalse(28490==28490+1);
+	assertFalse(9277==9277+1);
 }
 @Test
 public void bigFalseTestStreamIOProcStreamStream19() {
-	assertFalse(1085==1085+1);
+	assertFalse(12794==12794+1);
 }
 @Test
 public void bigFalseTestStreamIOProcStreamStream20() {
-	assertFalse(1848==1848+1);
+	assertFalse(19524==19524+1);
 }
 @Test
 public void bigFalseTestStreamIOProcStreamStream21() {
-	assertFalse(26765==26765+1);
+	assertFalse(18982==18982+1);
 }
 @Test
 public void bigFalseTestStreamIOProcStreamStream22() {
-	assertFalse(23005==23005+1);
+	assertFalse(13989==13989+1);
 }
 @Test
 public void bigFalseTestStreamIOProcStreamStream23() {
-	assertFalse(5036==5036+1);
+	assertFalse(30079==30079+1);
 }
 @Test
 public void bigFalseTestStreamIOProcStreamStream24() {
-	assertFalse(30165==30165+1);
+	assertFalse(6988==6988+1);
 }
 @Test
 public void bigFalseTestStreamIOProcStreamStream25() {
-	assertFalse(3090==3090+1);
+	assertFalse(13262==13262+1);
 }
 @Test
 public void bigFalseTestStreamIOProcStreamStream26() {
-	assertFalse(26217==26217+1);
+	assertFalse(17445==17445+1);
 }
 @Test
 public void bigFalseTestStreamIOProcStreamStream27() {
-	assertFalse(23255==23255+1);
+	assertFalse(6723==6723+1);
 }
 @Test
 public void bigFalseTestStreamIOProcStreamStream28() {
-	assertFalse(23122==23122+1);
+	assertFalse(6609==6609+1);
 }
 @Test
 public void bigFalseTestStreamIOProcStreamStream29() {
-	assertFalse(22105==22105+1);
+	assertFalse(1593==1593+1);
 }
 @Test
 public void bigFalseTestStreamIOProcStreamStream30() {
-	assertFalse(26090==26090+1);
+	assertFalse(19488==19488+1);
 }
 @Test
 public void bigFalseTestStreamIOProcStreamStream31() {
-	assertFalse(6731==6731+1);
+	assertFalse(14623==14623+1);
 }
 @Test
 public void bigFalseTestStreamIOProcStreamStream32() {
-	assertFalse(2270==2270+1);
+	assertFalse(26749==26749+1);
 }
 @Test
 public void bigFalseTestStreamIOProcStreamStream33() {
-	assertFalse(16818==16818+1);
+	assertFalse(8637==8637+1);
 }
 @Test
 public void bigFalseTestStreamIOProcStreamStream34() {
-	assertFalse(3071==3071+1);
+	assertFalse(31253==31253+1);
 }
 @Test
 public void bigFalseTestStreamIOProcStreamStream35() {
-	assertFalse(17722==17722+1);
+	assertFalse(32202==32202+1);
 }
 @Test
 public void bigFalseTestStreamIOProcStreamStream36() {
-	assertFalse(26301==26301+1);
+	assertFalse(3921==3921+1);
 }
 @Test
 public void bigFalseTestStreamIOProcStreamStream37() {
-	assertFalse(17384==17384+1);
+	assertFalse(9102==9102+1);
 }
 @Test
 public void bigFalseTestStreamIOProcStreamStream38() {
-	assertFalse(21625==21625+1);
+	assertFalse(9733==9733+1);
 }
 @Test
 public void bigFalseTestStreamIOProcStreamStream39() {
-	assertFalse(26134==26134+1);
+	assertFalse(22022==22022+1);
 }
 @Test
 public void bigFalseTestStreamIOProcStreamStream40() {
-	assertFalse(18607==18607+1);
+	assertFalse(31585==31585+1);
 }
 @Test
 public void bigFalseTestStreamIOProcStreamStream41() {
-	assertFalse(27198==27198+1);
+	assertFalse(14023==14023+1);
 }
 @Test
 public void bigFalseTestStreamIOProcStreamStream42() {
-	assertFalse(13733==13733+1);
+	assertFalse(32392==32392+1);
 }
 @Test
 public void bigFalseTestStreamIOProcStreamStream43() {
-	assertFalse(12531==12531+1);
+	assertFalse(26508==26508+1);
 }
 @Test
 public void bigFalseTestStreamIOProcStreamStream44() {
-	assertFalse(19489==19489+1);
+	assertFalse(7251==7251+1);
 }
 @Test
 public void bigFalseTestStreamIOProcStreamStream45() {
-	assertFalse(14634==14634+1);
+	assertFalse(27193==27193+1);
 }
 @Test
 public void bigFalseTestStreamIOProcStreamStream46() {
-	assertFalse(11098==11098+1);
+	assertFalse(14510==14510+1);
 }
 @Test
 public void bigFalseTestStreamIOProcStreamStream47() {
-	assertFalse(24474==24474+1);
+	assertFalse(30904==30904+1);
 }
 @Test
 public void bigFalseTestStreamIOProcStreamStream48() {
-	assertFalse(5910==5910+1);
+	assertFalse(23957==23957+1);
 }
 @Test
 public void bigFalseTestStreamIOProcStreamStream49() {
-	assertFalse(19411==19411+1);
+	assertFalse(5879==5879+1);
 }
 @Test
 public void bigFalseTestStreamIOProcStreamStream50() {
-	assertFalse(26305==26305+1);
+	assertFalse(24982==24982+1);
 }
 @Test
 public void bigFalseTestStreamIOProcStreamStream51() {
-	assertFalse(13164==13164+1);
+	assertFalse(14325==14325+1);
 }
 @Test
 public void bigFalseTestStreamIOProcStreamStream52() {
-	assertFalse(10964==10964+1);
+	assertFalse(30561==30561+1);
 }
 @Test
 public void bigFalseTestStreamIOProcStreamStream53() {
-	assertFalse(28492==28492+1);
+	assertFalse(9118==9118+1);
 }
 @Test
 public void bigFalseTestStreamIOProcStreamStream54() {
-	assertFalse(12007==12007+1);
+	assertFalse(11728==11728+1);
 }
 @Test
 public void bigFalseTestStreamIOProcStreamStream55() {
-	assertFalse(14589==14589+1);
+	assertFalse(3558==3558+1);
 }
 }
